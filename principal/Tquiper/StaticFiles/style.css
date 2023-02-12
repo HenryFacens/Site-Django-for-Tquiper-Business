@@ -4730,7 +4730,10 @@ body .search-modal .close:hover {
   transform: scale(1.1);
 }
 .rs-choose.choose-style3 .video-item {
-  background-image: url(images/video/video-image2.jpg);
+  background-image: url(img/Screenshot_1.png);
+  border-style:solid ;
+  border: #000;
+  border-width: 30px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4738,7 +4741,8 @@ body .search-modal .close:hover {
   padding: 295px 0px 295px 0px;
 }
 .rs-choose.choose-style3 .contact-bd {
-  background-image: url(images/bg/contact-bd.jpg);
+  /* background-image: url(images/bg/contact-bd.jpg); */
+  background-color: #333;
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -10615,7 +10619,8 @@ body .search-modal .close:hover {
 	32. Footer Section CSS
 ------------------------------------*/
 .rs-footer.footer-main-home {
-  background-image: url(images/bg/footer-bg.jpg);
+  /* background-image: url(images/bg/footer-bg.jpg); */
+  background-color: #333;
   background-size: cover;
 }
 .rs-footer.footer-main-home .footer-top {
@@ -10830,7 +10835,8 @@ body .search-modal .close:hover {
   background: #eb003d;
 }
 .rs-footer.footer-main-home.footer-style2 {
-  background-image: url(images/bg/footer-bg2.jpg);
+  /* background-image: url(images/bg/footer-bg2.jpg); */
+  background-color: #333;
 }
 .rs-footer.footer-main-home.footer-style2 .footer-bottom .copy-right-menu li a:hover,
 .rs-footer.footer-main-home.footer-style2 .footer-bottom .copyright p a:hover,
@@ -10857,7 +10863,8 @@ body .search-modal .close:hover {
   background: #e8271e;
 }
 .rs-footer.footer-main-home.footer-style3 {
-  background-image: url(images/bg/footer-bg3.jpg);
+  /* background-image: url(images/bg/footer-bg3.jpg); */
+  background-color: #333;
 }
 .rs-footer.footer-main-home.footer-style3 .footer-bottom .copy-right-menu li a:hover,
 .rs-footer.footer-main-home.footer-style3 .footer-bottom .copyright p a:hover,
