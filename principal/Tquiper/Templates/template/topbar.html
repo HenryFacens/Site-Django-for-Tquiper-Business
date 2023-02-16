@@ -70,7 +70,7 @@
 												<nav class="rs-menu hidden-md">
 													<ul class="nav-menu">
 														<li>
-															<a href="{% url 'base' %}" style="color: white;">Home</a>  
+															<a href="#" style="color: white;">Home</a>  
 														</li>
 														<li>
 															<a href="about.html" style="color: white;">QUEM SOMOS </a>
@@ -86,7 +86,7 @@
 															</ul>
 														</li>
 														<li>
-															<a href="contact.html" style="color: white;">CONTATOS</a>
+															<a  href="{% url 'contatos' %}" style="color: white;">CONTATOS</a>
 														</li>
 													</ul> <!-- //.nav-menu -->
 												</nav>
@@ -138,7 +138,7 @@
 							</div>
 							<ul class="nav-menu">
 								<li>
-									<a href="{% static 'tquiper.html' %}">Home</a>
+									<a href="{% url 'Site' %}">Home</a>
 								</li>
 								<li>
 									<a href="about.html">QUEM SOMOS</a>
@@ -155,7 +155,7 @@
 									</ul>
 								</li>
 								<li>
-									<a href="contact.html">Contato</a>
+									<a href="{% url 'contatos' %}">Contato</a>
 								</li>
 							</ul> <!-- //.nav-menu -->
 							<!-- //.nav-menu -->

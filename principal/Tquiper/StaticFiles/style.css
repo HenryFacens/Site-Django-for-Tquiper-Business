@@ -180,7 +180,7 @@ h6 {
   padding-bottom: 205px;
 }
 a {
-  color: #ffb703;
+  color:red;
   transition: all 0.3s ease;
   text-decoration: none !important;
   outline: none !important;
@@ -189,7 +189,7 @@ a:active,
 a:hover {
   text-decoration: none;
   outline: 0 none;
-  color: #ffb703;
+  color: red;
 }
 ul {
   list-style: outside none none;
@@ -857,7 +857,7 @@ blockquote p {
   overflow: hidden;
 }
 .readon.more {
-  background: #ffb703;
+  background: red;
   padding: 17px 23px 17px 23px;
   color: #010d14;
   font-weight: 500;
@@ -1926,7 +1926,7 @@ blockquote p {
   border: 0;
   width: 65px;
   height: 5px;
-  background: #FFB703;
+  background: red;
   z-index: 1;
   margin-left: 0;
   left: 0;
@@ -3830,7 +3830,7 @@ body .search-modal .close:hover {
   right: 0;
   transition: all .3s ease;
   z-index: -1;
-  background: #ffb703;
+  background:  red;
   width: 65px;
 }
 .rs-breadcrumbs .breadcrumbs-inner .sub-text {
@@ -3863,7 +3863,7 @@ body .search-modal .close:hover {
 .rs-breadcrumbs .breadcrumbs-inner .breadcrumbs-area li a:before {
   content: "";
   position: absolute;
-  background: #ffb703;
+  background: red;
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -3889,7 +3889,7 @@ body .search-modal .close:hover {
   background: url(images/breadcrumbs/inr-5.jpg);
 }
 .rs-breadcrumbs.img6 {
-  background: url(images/breadcrumbs/inr-6.jpg);
+  background: url(img/f9ecd8f2-b7bd-4c28-a916-c4a688d9ebbe.png);
 }
 /* ------------------------------------
 	07. Banner Section CSS
@@ -5719,7 +5719,7 @@ body .search-modal .close:hover {
   opacity: 0.45;
 }
 .rs-contact.contact-style6 .contact-project {
-  background: url(images/contact/pro-con2.jpg);
+  background: url(img/5ee31862-3b15-4edc-a164-36b831406463.png);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
