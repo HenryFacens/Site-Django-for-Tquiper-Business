@@ -9,3 +9,6 @@ def contact(request):
 
 def about(request):
     return render(request,"about/index/site/base.html")
+
+def time(request):
+    return render(request,"time/index/site/base.html")
