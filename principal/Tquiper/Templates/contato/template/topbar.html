@@ -41,7 +41,7 @@
                                 <div class="toolbar-sl-share">
                                     <ul class="clearfix">
                                         <li class="opening"> <em><i class="fi fi-rr-time-add"></i> Segunda a Sexta 07:00 as 17:00</em> </li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
                                         <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
                                         <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
@@ -73,7 +73,7 @@
 															<a href="{% url 'Site' %}" style="color: white;">Home</a>  
 														</li>
 														<li>
-															<a href="about.html" style="color: white;">QUEM SOMOS </a>
+															<a href="{% url 'sobrenos' %}" style="color: white;">QUEM SOMOS </a>
 														</li>
 														<li>
 															<a href="services.html" style="color: white;">SERVIÇOS</a>
@@ -141,7 +141,7 @@
             <a href="{% url 'Site' %}">Home</a>
         </li>
         <li>
-            <a href="about.html">QUEM SOMOS</a>
+            <a href="{% url 'sobrenos' %}">QUEM SOMOS</a>
         </li>
         <li>
             <a href="services.html">Serviços</a>
