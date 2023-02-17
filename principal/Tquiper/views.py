@@ -7,3 +7,5 @@ def startsite(request):
 def contact(request):
     return render(request,"contato/index/site/base.html")
 
+def about(request):
+    return render(request,"about/index/site/base.html")
