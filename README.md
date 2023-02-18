@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Site Tquiper em Django
 
 <p align="center">Projeto iniciado por conta.</p>
@@ -22,4 +22,4 @@ pip install -r requirements.txt
 ```
 python manage.py runserver 0.0.0.0:8080
 ```
->>>>>>> dev
+
