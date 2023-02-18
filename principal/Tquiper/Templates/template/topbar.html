@@ -27,7 +27,7 @@
 											<ul class="rs-contact-info">                   
 												<li>
 													<i class="fi fi-rr-envelope-plus"></i>                  
-													<a href="mailto:info@konstruk.com">tquiper.aca@uol.com</a>               
+													<a href="mailto:comercial@tquiper.com.br">comercial@tquiper.com.br</a>               
 												</li>
 												<li>
 													<i class="fi-rr-map-marker-home"></i>                                      
@@ -41,9 +41,9 @@
 											<ul class="clearfix">
 												<li class="opening"> <em><i class="fi fi-rr-time-add"></i> Segunda a Sexta 07:00 as 17:00</em> </li>
 												<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-												<!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 												<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-												<li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+												<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 											</ul>
 										</div>
 									</div>
@@ -58,7 +58,7 @@
 								<div class="row-table">
 									<div class="col-cell header-logo">                                  
 										<div class="logo-area">
-											<a href="index.html">
+											<a href="{% url 'Site' %}">
 												<img class="normal-logo" src="{% static 'img/logo-tquiper-branco.png' %}" alt="logo">  
 												<img class="sticky-logo" src="{% static 'img/icone.png' %}" alt="logo">
 											</a>
@@ -69,109 +69,24 @@
 											<div class="main-menu">
 												<nav class="rs-menu hidden-md">
 													<ul class="nav-menu">
-														<li class="menu-item-has-children current-menu-item">
-															<a href="index.html" style="color: white;">Home</a>
-															<ul class="sub-menu">
-																<li class="menu-item-has-children current-menu-item">
-																	<a href="#">Multipages</a>
-																	<ul class="sub-menu">
-																		<li><a href="index.html">Main Home</a></li>
-																		<li><a href="index2.html">Construction 2</a></li>
-																		<li><a href="index3.html">Construction 3</a></li>
-																		<li class="active"><a href="index4.html">Roofing</a></li>
-																		<li><a href="index5.html">Industry</a></li>
-																		<li><a href="index6.html">Plumber</a></li>
-																		<li><a href="index7.html">Logistics</a></li>
-																		<li><a href="index8.html">Carpenter</a></li>
-																		<li><a href="index9.html">Architecture</a></li>
-																		<li><a href="index10.html">Energy</a></li>
-																	</ul> 
-																</li>
-																<li class="menu-item-has-children">
-																	<a href="#">Onepages</a>
-																	<ul class="sub-menu">
-																		<li><a href="onepage1.html">Onepage Main</a></li>
-																		<li><a href="onepage2.html">Onepage Construction 2</a></li>
-																		<li><a href="onepage3.html">Onepage Construction 3</a></li>
-																		<li><a href="onepage4.html">Onepage Roofing</a></li>
-																		<li><a href="onepage5.html">Onepage Industry</a></li>
-																		<li><a href="onepage6.html">Onepage Plumber</a></li>
-																		<li><a href="onepage7.html">Onepage Logistics</a></li>
-																		<li><a href="onepage8.html">Onepage Carpenter</a></li>
-																		<li><a href="onepage9.html">Onepage Architecture</a></li>
-																		<li><a href="onepage10.html">Onepage Energy</a></li>
-																	</ul>  
-																</li>
-															</ul>
+														<li>
+															<a href="{% url 'Site' %}" style="color: white;">Home</a>  
 														</li>
 														<li>
-															<a href="about.html" style="color: white;">QUEM SOMOS </a>
+															<a href="{% url 'sobrenos' %}" style="color: white;">QUEM SOMOS </a>
 														</li>
-														<li class="menu-item-has-children">
+														<li>
 															<a href="services.html" style="color: white;">SERVIÇOS</a>
-															<ul class="sub-menu">
-																<li><a href="services-style1.html">Services Style 1</a></li>
-																<li><a href="services-style2.html">Services Style 2</a></li>
-																<li class="last-item menu-item-has-children">
-																	<a href="#">Service Single</a>
-																	<ul class="sub-menu">
-																		<li><a href="general-construction.html">General Construction</a></li>
-																		<li><a href="property-maintenance.html">Property Maintenance</a></li>
-																		<li><a href="preconstruction.html">Preconstruction</a></li>
-																		<li><a href="virtual-design-build.html">Virtual Design & Build</a></li>
-																		<li><a href="project-managment.html">Project Managment</a></li>
-																		<li><a href="design-build.html">Design Build</a></li>
-																	</ul>
-																</li>
-															</ul>
 														</li>
 														<li class="menu-item-has-children">
-															<a href="#" style="color: white;">PAGINAS</a>
+															<a href="#" style="color: white;">Time & Galeria</a>
 															<ul class="sub-menu">
-																<li class="last-item menu-item-has-children">
-																	<a href="#">Time</a>
-																	<ul class="sub-menu">
-																		<li><a href="team-style1.html">Team Style 1</a></li>
-																		<li><a href="team-style2.html">Team Style 2</a></li>
-																		<li><a href="team-style3.html">Team Style 3</a></li>
-																		<li><a href="team-style4.html">Team Style 4</a></li>
-																		<li><a href="team-style5.html">Team Style 5</a></li>
-																		<li><a href="team-single.html">Team Single</a></li>
-																	</ul>
-																</li>
-																<li class="last-item menu-item-has-children">
-																	<a href="#" style="color: white;">Projetos</a>
-																	<ul class="sub-menu">
-																		<li><a href="projects-style1.html">Projects Style 1</a></li>
-																		<li><a href="projects-style2.html">Projects Style 2</a></li>
-																		<li><a href="projects-style3.html">Projects Style 3</a></li>
-																		<li><a href="projects-style4.html">Projects Style 4</a></li>
-																		<li><a href="projects-style5.html">Projects Style 5</a></li>
-																		<li><a href="projects-filter-style1.html">Projects Filter Style 1</a></li>
-																		<li><a href="projects-filter-style2.html">Projects Filter Style 2</a></li>
-																		<li><a href="projects-single.html">Projects Single</a></li>
-																	</ul>
-																</li>
-																<li><a href="pricing-plan.html">Pricing Plan</a></li>
-																<li><a href="faq.html">Faq</a></li>
-																<li><a href="gallery.html">Gallery</a></li>
-																<li class="last-item menu-item-has-children">
-																	<a href="#">Shop</a>
-																	<ul class="sub-menu">
-																		<li><a href="shop.html">Shop</a></li>
-																		<li><a href="shop-single.html">Shop Single</a></li>
-																		<li><a href="cart.html">Cart</a></li>
-																		<li><a href="checkout.html">Checkout</a></li>
-																		<li><a href="my-account.html">My Account</a></li>
-																	</ul>
-																</li>     
+																<li><a href="{% url 'time'  %}">Time</a></li>
+																<li><a href="{% url 'galeria' %}">Galeria</a></li>
 															</ul>
 														</li>
 														<li>
-															<a href="blog.html" style="color: white;">BLOG</a>
-														</li>
-														<li>
-															<a href="contact.html" style="color: white;">CONTATOS</a>
+															<a  href="{% url 'contatos' %}" style="color: white;">CONTATOS</a>
 														</li>
 													</ul> <!-- //.nav-menu -->
 												</nav>
@@ -185,7 +100,7 @@
 													<i class="fi fi-rr-phone-call"></i>                                
 													<div class="phone-number" style="color: white;">
 														<span>Contato</span>
-														<a href="(+55) 11 97742-9215" style="color:white"> (+55) (11)97742-9215</a>
+														<a href="https://api.whatsapp.com/send/?phone=5511977429215&text=Olá%21+Quero+fazer+um+orçamento+ou+proposta&type=phone_number&app_absent=0" style="color:white"> (+55) (11)97742-9215</a>
 													</div>                   
 												</li>
 												<li class="humburger">
@@ -222,109 +137,25 @@
 								</a>
 							</div>
 							<ul class="nav-menu">
-								<li class="menu-item-has-children current-menu-item">
-									<a href="index.html">Home</a>
-									<ul class="sub-menu">
-										<li class="menu-item-has-children current-menu-item">
-											<a href="#">Multipages</a>
-											<ul class="sub-menu">
-												<li><a href="index.html">Main Home</a></li>
-												<li><a href="index2.html">Construction 2</a></li>
-												<li><a href="index3.html">Construction 3</a></li>
-												<li class="active"><a href="index4.html">Roofing</a></li>
-												<li><a href="index5.html">Industry</a></li>
-												<li><a href="index6.html">Plumber</a></li>
-												<li><a href="index7.html">Logistics</a></li>
-												<li><a href="index8.html">Carpenter</a></li>
-												<li><a href="index9.html">Architecture</a></li>
-												<li><a href="index10.html">Energy</a></li>
-											</ul> 
-										</li>
-										<li class="menu-item-has-children">
-											<a href="#">Onepages</a>
-											<ul class="sub-menu">
-												<li><a href="onepage1.html">Onepage Main</a></li>
-												<li><a href="onepage2.html">Onepage Construction 2</a></li>
-												<li><a href="onepage3.html">Onepage Construction 3</a></li>
-												<li><a href="onepage4.html">Onepage Roofing</a></li>
-												<li><a href="onepage5.html">Onepage Industry</a></li>
-												<li><a href="onepage6.html">Onepage Plumber</a></li>
-												<li><a href="onepage7.html">Onepage Logistics</a></li>
-												<li><a href="onepage8.html">Onepage Carpenter</a></li>
-												<li><a href="onepage9.html">Onepage Architecture</a></li>
-												<li><a href="onepage10.html">Onepage Energy</a></li>
-											</ul>  
-										</li>
-									</ul>
+								<li>
+									<a href="{% url 'Site' %}">Home</a>
 								</li>
 								<li>
-									<a href="about.html">About</a>
+									<a href="{% url 'sobrenos' %}">QUEM SOMOS</a>
 								</li>
+								<li>
+									<a href="services.html">Serviços</a>
+								</li>
+
 								<li class="menu-item-has-children">
-									<a href="services.html">Services</a>
+									<a href="#">Time & Galeria</a>
 									<ul class="sub-menu">
-										<li><a href="services-style1.html">Services Style 1</a></li>
-										<li><a href="services-style2.html">Services Style 2</a></li>
-										<li class="last-item menu-item-has-children">
-											<a href="#">Service Single</a>
-											<ul class="sub-menu">
-												<li><a href="general-construction.html">General Construction</a></li>
-												<li><a href="property-maintenance.html">Property Maintenance</a></li>
-												<li><a href="preconstruction.html">Preconstruction</a></li>
-												<li><a href="virtual-design-build.html">Virtual Design & Build</a></li>
-												<li><a href="project-managment.html">Project Managment</a></li>
-												<li><a href="design-build.html">Design Build</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">
-									<a href="#">Pages</a>
-									<ul class="sub-menu">
-										<li class="last-item menu-item-has-children">
-											<a href="#">Team</a>
-											<ul class="sub-menu">
-												<li><a href="team-style1.html">Team Style 1</a></li>
-												<li><a href="team-style2.html">Team Style 2</a></li>
-												<li><a href="team-style3.html">Team Style 3</a></li>
-												<li><a href="team-style4.html">Team Style 4</a></li>
-												<li><a href="team-style5.html">Team Style 5</a></li>
-												<li><a href="team-single.html">Team Single</a></li>
-											</ul>
-										</li>
-										<li class="last-item menu-item-has-children">
-											<a href="#">Projects</a>
-											<ul class="sub-menu">
-												<li><a href="projects-style1.html">Projects Style 1</a></li>
-												<li><a href="projects-style2.html">Projects Style 2</a></li>
-												<li><a href="projects-style3.html">Projects Style 3</a></li>
-												<li><a href="projects-style4.html">Projects Style 4</a></li>
-												<li><a href="projects-style5.html">Projects Style 5</a></li>
-												<li><a href="projects-filter-style1.html">Projects Filter Style 1</a></li>
-												<li><a href="projects-filter-style2.html">Projects Filter Style 2</a></li>
-												<li><a href="projects-single.html">Projects Single</a></li>
-											</ul>
-										</li>
-										<li><a href="pricing-plan.html">Pricing Plan</a></li>
-										<li><a href="faq.html">Faq</a></li>
-										<li><a href="gallery.html">Gallery</a></li>
-										<li class="last-item menu-item-has-children">
-											<a href="#">Shop</a>
-											<ul class="sub-menu">
-												<li><a href="shop.html">Shop</a></li>
-												<li><a href="shop-single.html">Shop Single</a></li>
-												<li><a href="cart.html">Cart</a></li>
-												<li><a href="checkout.html">Checkout</a></li>
-												<li><a href="my-account.html">My Account</a></li>
-											</ul>
-										</li>     
+										<li><a href="{% url 'time'  %}">Time</a></li>
+										<li><a href="{% url 'galeria' %}">Galeria</a></li>
 									</ul>
 								</li>
 								<li>
-									<a href="blog.html">Blog</a>
-								</li>
-								<li>
-									<a href="contact.html">Contact</a>
+									<a href="{% url 'contatos' %}">Contato</a>
 								</li>
 							</ul> <!-- //.nav-menu -->
 							<!-- //.nav-menu -->
@@ -347,7 +178,7 @@
 										</div>
 										<div class="info-content" style="color: red;">
 											<h4 class="title">Email</h4>
-											<em><a href="mailto:info@konstruk.com">tquiper.aca@uol.com</a></em>
+											<em><a href="mailto:comercial@tquiper.com.br">comercial@tquiper.com.br</a></em>
 										</div>
 									</div>
 									<div class="address-list">
@@ -356,7 +187,7 @@
 										</div>
 										<div class="info-content">
 											<h4 class="title">Ligue</h4>
-											<em>+55 	(11)97742-9215</em>
+											<em>+55(11)97742-9215</em>
 										</div>
 									</div>
 								</div>
