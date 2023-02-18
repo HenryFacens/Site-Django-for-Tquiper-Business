@@ -3881,7 +3881,8 @@ body .search-modal .close:hover {
   background: url(images/breadcrumbs/inr-2.jpg);
 }
 .rs-breadcrumbs.img3 {
-  background: url(images/breadcrumbs/inr-3.jpg);
+  /* background: url(img/Features-AEMP-Ready.jpg); */
+  background: #7f0800;
 }
 .rs-breadcrumbs.img4 {
   background: url(images/breadcrumbs/inr-4.jpg);
