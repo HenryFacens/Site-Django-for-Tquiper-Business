@@ -12,3 +12,6 @@ def about(request):
 
 def time(request):
     return render(request,"time/index/site/base.html")
+
+def gallery(request):
+    return render(request,"galeria/index/site/base.html")
