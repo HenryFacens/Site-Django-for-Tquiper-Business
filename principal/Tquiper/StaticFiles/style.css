@@ -354,7 +354,8 @@ ul {
   background-size: cover;
 }
 .bg23 {
-  background: url(images/bg/konstruk-bg.jpg);
+  /* background: url(img/istockphoto-89282768-612x612.jpg); */
+  background: #333;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3878,11 +3879,12 @@ body .search-modal .close:hover {
   background: url(img/076fd6bc-82b5-496f-9305-f96f3e07b9a0.png);
 }
 .rs-breadcrumbs.img2 {
-  background: url(images/breadcrumbs/inr-2.jpg);
+  /* background: url(images/breadcrumbs/inr-2.jpg); */
+  background: #333;
 }
 .rs-breadcrumbs.img3 {
   /* background: url(img/Features-AEMP-Ready.jpg); */
-  background: #7f0800;
+  background: #333;
 }
 .rs-breadcrumbs.img4 {
   background: url(images/breadcrumbs/inr-4.jpg);
