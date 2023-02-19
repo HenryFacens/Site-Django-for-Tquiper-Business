@@ -361,7 +361,8 @@ ul {
   background-size: cover;
 }
 .bg24 {
-  background: url(images/bg/team-single-bg.jpg);
+  /* background: url(images/bg/team-single-bg.jpg); */
+  background: #333;
   background-repeat: no-repeat;
 }
 .offwrap {
