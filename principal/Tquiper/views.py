@@ -15,3 +15,6 @@ def time(request):
 
 def gallery(request):
     return render(request,"galeria/index/site/base.html")
+
+def servico(request):
+    return render(request,"servico/index/site/base.html")
