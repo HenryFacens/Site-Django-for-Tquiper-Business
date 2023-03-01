@@ -20,4 +20,5 @@ from Tquiper import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Tquiper.urls')),
+    path('email/', include('envia_email.urls')),
 ]
