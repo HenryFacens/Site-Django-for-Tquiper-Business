@@ -3,7 +3,6 @@
 
 <p align="center">Projeto iniciado por conta.</p>
 
-=======
 # Projeto feito para empresa TQUIPER
 
 ## Installation
