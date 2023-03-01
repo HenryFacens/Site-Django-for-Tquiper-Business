@@ -1,10 +1,11 @@
 {% load static %}
+</div> 
 
 <footer id="rs-footer" class="rs-footer footer-main-home footer-style1">
     <div class="footer-top">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 pr-20 md-pr-15 md-mb-20">
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="col-lg-5 pr-20 md-pr-15 md-mb-20">
                     <div class="footer-logo mb-51 md-mb-30">
                         <a href="{% url 'Site' %}"><img src="{% static 'img/logo-tquiper-rodape-1.png' %}" alt=""></a>
                     </div>
@@ -14,15 +15,15 @@
                         <p class="pb-25"><strong>Horário de funcinamento: </strong><br>Segunda a sexta
                             07:00 as 17:00</p>
                     </div>
-                    <ul class="footer-social md-mb-30">  
+                    <!-- <ul class="footer-social md-mb-30">   -->
                         <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                      -->
                         <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>                     
                         <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>                     
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>                      -->
-                      </ul>
+                      <!-- </ul> -->
                 </div>
-                        <div class="col-lg-3 md-mb-10">
-                            <h3 class="footer-title">Contact Info</h3>s
+                        <div class="col-lg-3">
+                            <h3 class="footer-title">Informação de Contato</h3>
                             <ul class="address-widget">
                                 <li>
                                     <i class="fi fi-rr-map-marker-home"></i>
@@ -47,13 +48,14 @@
                             </ul>
                         </div>
                 <div class="col-lg-3">
-                    <h3 class="footer-title">Contate-nos</h3>
-                    <p class="widget-desc">Envie-nos uma mensagem ! </p>
-                    <p>
-                        <input type="email" name="email" placeholder="Endereço de email" required="">
-                        <input type="submit" value="Enviar">
-                    </p>
+                    <h3 class="footer-title" style="display: flex; justify-content: center;">login</h3>
+                    <div class="btn-part" style="display: flex; justify-content: center;">                                            
+                        <div class="form-group mb-0" >
+                            <input class="readon more submit" type="submit" value="Login Page" onclick="location.href='{% url 'login' %}'">
+                        </div>
+                    </div> 
                 </div>
+                
             </div>
         </div>
     </div>
@@ -76,21 +78,3 @@
         </div>
     </div>
 </footer>
-
-<div id="scrollUp" class="red-color">
-    <i class="fa fa-angle-up"></i>
-</div>
-
-<div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="search-block clearfix">
-                <form>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Search Here..." type="text">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
