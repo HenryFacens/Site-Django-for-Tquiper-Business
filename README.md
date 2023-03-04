@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-
-# Site Tquiper em Django
-
-<p align="center">Projeto iniciado por conta.</p>
-
-# Projeto feito para empresa TQUIPER
-=======
 # Projeto Django para Empresa
->>>>>>> dev
 
 ## Descrição do Projeto
 
@@ -18,17 +9,6 @@ Este projeto foi desenvolvido para atender as necessidades de uma empresa, que s
 - Website institucional
 - Dashboard para monitoramento de contatos e outras informações relevantes
 
-<<<<<<< HEAD
-Use a venv do arquivo ou  instale o requirements!
-```
-pip install -r requirements.txt
-```
-### Django
-```
-python manage.py runserver 0.0.0.0:8080
-```
-
-=======
 ## Tecnologias Utilizadas
 
 - Django
@@ -43,4 +23,3 @@ Para executar este projeto, siga as instruções presentes no arquivo `instrucoe
 ## Contribuição
 
 Este projeto é aberto à contribuições e sugestões. Para reportar bugs ou propor melhorias, abra uma issue neste repositório.
->>>>>>> dev
