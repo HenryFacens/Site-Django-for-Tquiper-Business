@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from django.conf import settings
+from django.contrib import messages
+from django.contrib.auth import authenticate,login
 
 
 def startsite(request):
@@ -24,8 +26,25 @@ def gallery(request):
 def servico(request):
     return render(request,"servico/index/site/base.html")
 
+# def my_account(request):
+#     return render(request,"my_account/index/site/base.html")
+
 def my_account(request):
-    return render(request,"my_account/index/site/base.html")
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username,password=password)
+
+        if user is not None:
+            login(request, user)
+            return render(request, "my_account/index/site/base.html")
+
+        else:
+            messages.error(request, "Credencias Erradas")
+            return redirect('login')
+
+    return render(request, "my_account/index/site/base.html")
 
 @csrf_exempt
 def contact(request):

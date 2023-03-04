@@ -11,5 +11,5 @@ urlpatterns = [
     path('galeria/',views.gallery, name="galeria"),
     path('servico/',views.servico, name='servico'),
     path('login/',views.my_account, name='login'),
-    # path('',views.envia_email, name='envia_email'),
+
 ]
