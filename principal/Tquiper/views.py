@@ -11,9 +11,6 @@ from django.contrib.auth import authenticate,login
 def startsite(request):
     return render(request,"page/site/tquiper.html")
 
-# def contact(request):
-#     return render(request,"contato/index/site/base.html")
-
 def about(request):
     return render(request,"about/index/site/base.html")
 
@@ -26,11 +23,15 @@ def gallery(request):
 def servico(request):
     return render(request,"servico/index/site/base.html")
 
-# def my_account(request):
-#     return render(request,"my_account/index/site/base.html")
+def dashboard(request):
+    return render(request, "dashboard/index/site/base.html")
 
+
+@csrf_exempt
 def my_account(request):
+
     if request.method == "POST":
+
         username = request.POST['username']
         password = request.POST['password']
 
@@ -38,7 +39,7 @@ def my_account(request):
 
         if user is not None:
             login(request, user)
-            return render(request, "my_account/index/site/base.html")
+            return redirect('dashboard')
 
         else:
             messages.error(request, "Credencias Erradas")
