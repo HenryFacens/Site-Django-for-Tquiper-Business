@@ -8,32 +8,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegisterForm
-
-
-def register(request):
-    if request.method == "POST":
-
-        print("dentro")
-
-        form = RegisterForm(request.POST)
-
-        if form.is_valid():
-            user = form.save()
-            # user.refresh_from_db()
-            # user.save()
-            print("salvo")
-            return redirect("dashboard/")
-        else:
-            print("nao valido")
-    else:
-        form = RegisterForm()
-        print("nao eh valido")
-
-    print("render")
-
-    return render(request, "dashboard/register/site/base.html", {"form": form})
-
+from Tquiper.forms import RegisterForm
 
 def startsite(request):
     return render(request, "page/site/tquiper.html")
@@ -124,3 +99,25 @@ def contact(request):
         print(send_mail)
 
     return render(request, "contato/index/site/base.html")
+
+
+def register(request):
+    if request.method == "POST":
+
+        print("dentro")
+
+        form = RegisterForm(request.POST or None)
+
+        if form.is_valid():
+            user = form.save()
+            print("salvo")
+            return redirect("dashboard")
+        else:
+            print("nao valido")
+    else:
+        form = RegisterForm()
+        print("nao eh valido")
+
+    print("render")
+
+    return render(request, "dashboard/register/site/base.html", {"form": form})
