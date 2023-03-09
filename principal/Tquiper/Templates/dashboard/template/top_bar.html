@@ -185,9 +185,10 @@
                 <img alt="Midone - HTML Admin Template" src="{% static 'images/profile-5.jpg' %}">
             </div>
             <div class="dropdown-menu w-56">
+                {% csrf_token %}
                 <ul class="dropdown-content bg-primary/80 before:block before:absolute before:bg-black before:inset-0 before:rounded-md before:z-[-1] text-white">
                     <li class="p-2">
-                        <div class="font-medium">Christian Bale</div>
+                        <div class="font-medium">{{ request.user }}</div>
                         <div class="text-xs text-white/60 mt-0.5 dark:text-slate-500">Backend Engineer</div>
                     </li>
                     <li>
@@ -197,7 +198,7 @@
                         <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user" class="w-4 h-4 mr-2"></i> Profile </a>
                     </li>
                     <li>
-                        <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
+                        <a href="{% url 'register'%}" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
                     </li>
                     <li>
                         <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
@@ -208,8 +209,8 @@
                     <li>
                         <hr class="dropdown-divider border-white/[0.08]">
                     </li>
-                    <li>
-                        <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                    <li>  
+                        <a href="{% url 'logout' %}" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
                     </li>
                 </ul>
             </div>
