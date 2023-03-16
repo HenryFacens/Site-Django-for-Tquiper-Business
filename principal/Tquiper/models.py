@@ -1,7 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Permission, Group
 from django.utils import timezone
 from django.apps import AppConfig
+
+admin_group, created 					= Group.objects.get_or_create(name="admin")
+employee_group, created 				= Group.objects.get_or_create(name="employee")
+company_group, created 					= Group.objects.get_or_create(name="Company")
 
 prem_CHOICES = [
 		('admin','Administrador'),
