@@ -19,7 +19,8 @@ class Group(models.Model):
 class Company(models.Model):
 	Empresa 							= models.CharField(max_length=100, default="")
 	Grupo								= models.CharField(max_length=100,choices=prem_CHOICES,default="Company")
-	DateTimeField						= models.DateTimeField(auto_now_add=True)
+	created_at							= models.DateTimeField(auto_now=True)
+	updated_at 							= models.DateTimeField(auto_now_add=True)
 	email								= models.EmailField(null=True)
 	Imagem_do_Contrato					= models.ImageField(upload_to='images/',blank=False,null=True)
 	Valor_do_Contrato					= models.DecimalField(max_digits=100,decimal_places=2,null=True)

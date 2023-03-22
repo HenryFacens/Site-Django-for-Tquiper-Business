@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from Tquiper.forms import RegisterForm
+from django.views.decorators.http import require_GET, require_POST
 
 def startsite(request):
     return render(request, "page/site/tquiper.html")
@@ -42,7 +43,6 @@ def saiu(request):
     print("saiu")
     return redirect("login")
 
-
 def my_account(request):
 
     if request.method == "POST":
@@ -61,7 +61,6 @@ def my_account(request):
             return redirect("login")
 
     return render(request, "my_account/index/site/base.html")
-
 
 @csrf_exempt
 def contact(request):
@@ -104,20 +103,16 @@ def contact(request):
 def register(request):
     if request.method == "POST":
 
-        print("dentro")
-
-        form = RegisterForm(request.POST or None)
+        form            = RegisterForm(request.POST or None) # Requisitando a Models
 
         if form.is_valid():
-            user = form.save()
-            print("salvo")
+
+            user        = form.save()
+
             return redirect("dashboard")
+
         else:
             print("nao valido")
     else:
         form = RegisterForm()
-        print("nao eh valido")
-
-    print("render")
-
     return render(request, "dashboard/register/site/base.html", {"form": form})
