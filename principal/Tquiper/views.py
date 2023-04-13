@@ -9,7 +9,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from Tquiper.forms import RegisterForm
+from .models import Company
 from django.views.decorators.http import require_GET, require_POST
+
+
+def users(request):
+    return render(request , 'dashboard/Users/template/base.html')
 
 def startsite(request):
     return render(request, "page/site/tquiper.html")
@@ -103,11 +108,18 @@ def contact(request):
 def register(request):
     if request.method == "POST":
 
-        form            = RegisterForm(request.POST or None) # Requisitando a Models
+        Usuario    = request.post = ['Usuario']
+        Empresa    = request.post = ['Empresa']
+        Nome       = request.post = ['Nome']
+        Sobrenome  = request.post = ['Sobrenome']
+        email      = request.post = ['email']
+
+
+        # form            = RegisterForm(request.POST or None) # Requisitando a Models
 
         if form.is_valid():
-
-            user        = form.save()
+            modelscom   = Company(Usuario=Usuario,Empresa=Empresa,Nome=Nome,Sobrenome=Sobrenome,email=email)
+            user        = modelscom.save()
 
             return redirect("dashboard")
 

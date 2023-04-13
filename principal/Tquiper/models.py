@@ -5,7 +5,7 @@ from django.apps import AppConfig
 
 admin_group, created 					= Group.objects.get_or_create(name="admin")
 employee_group, created 				= Group.objects.get_or_create(name="employee")
-company_group, created 					= Group.objects.get_or_create(name="Company")
+company_group, created 					= Group.objects.get_or_create(name="company")
 
 prem_CHOICES = [
 		('admin','Administrador'),
@@ -17,6 +17,9 @@ class Group(models.Model):
 	pass
 
 class Company(models.Model):
+
+	Nome								= models.CharField(max_length=100,default="")
+	Sobrenome							= models.CharField(max_length=100,default="")
 	Empresa 							= models.CharField(max_length=100, default="")
 	Grupo								= models.CharField(max_length=100,choices=prem_CHOICES,default="Company")
 	created_at							= models.DateTimeField(auto_now=True)

@@ -11,4 +11,67 @@
             y.type = 'password';
           }
         }
+        
+function checkPasswordStrength(password) {
+
+  let strength = 0;
+  
+  if (password.length >= 8) strength++;
+  if (/[A-Z]/.test(password)) strength++;
+  if (/[a-z]/.test(password)) strength++;
+  if (/[0-9]/.test(password)) strength++;
+  if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+  let passwordStrengthElement = document.getElementById("password-strength");
+  let changecolor1            = document.getElementById("color1");
+  let changecolor2            = document.getElementById("color2");
+  let changecolor3            = document.getElementById("color3");
+
+    changecolor1.classList = "";
+    changecolor2.classList = "";
+    changecolor3.classList = "";
+    passwordStrengthElement.classList = "";
+
+  if (strength === 0) {
+    passwordStrengthElement.innerHTML = "";
+  } else if (strength <= 2) {
+    passwordStrengthElement.innerHTML = "Senha fraca";
+    passwordStrengthElement.classList.add("text-danger","mt-2");
+    console.log("Entrou");
+    changecolor1.classList = "col-span-3 h-full rounded bg-danger";
+  } else if (strength <= 4) {
+    passwordStrengthElement.innerHTML = "Senha média";
+    passwordStrengthElement.classList.add("text-warning","mt-2");
+    changecolor1.classList  = "col-span-3 h-full rounded bg-warning";
+    changecolor2.classList = "col-span-3 h-full rounded bg-warning";
+  } else{
+    passwordStrengthElement.innerHTML = "Senha forte";
+    passwordStrengthElement.classList.add("text-primary","mt-2");
+    changecolor1.classList = "col-span-3 h-full rounded bg-success";
+    changecolor2.classList = "col-span-3 h-full rounded bg-success";
+    changecolor3.classList = "col-span-3 h-full rounded bg-success";
+  }
+}
+
+function checkPasswords() {
+  
+    let passwordconfirmation = document.getElementById("password-confirmation");
+    var password1 = document.getElementById('pass1').value;
+    var password2 = document.getElementById('pass2').value;
+
+    console.log(password1);
+    console.log(password2);
+    if(password1 === '' && password1 === '')
+    {
+      passwordconfirmation.innerHTML = "";
+    }else{
+    if (password1 === password2) {
+      passwordconfirmation.innerHTML = "As senhas correspondem!";
+      } else {
+        
+        passwordconfirmation.innerHTML = "As senhas não correspondem!";
+    }
+  }
+}
+
 </script>

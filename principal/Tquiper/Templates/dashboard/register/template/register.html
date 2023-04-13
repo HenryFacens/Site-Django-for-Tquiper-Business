@@ -1,84 +1,51 @@
  {% load static %}
-     <div class="container sm:px-10">
-            <div class="block xl:grid grid-cols-2 gap-4">
-                <!-- BEGIN: Register Info -->
-                <div class="hidden xl:flex flex-col min-h-screen">
-                    <a href="" class="-intro-x flex items-center pt-5">
-                        <img alt="Midone - HTML Admin Template" class="w-6" src="{% static 'images/logo.svg' %}">
-                        <span class="text-white text-lg ml-3"> Tquiper </span> 
-                    </a>
-                    <div class="my-auto">
-                        <img alt="Midone - HTML Admin Template" class="-intro-x w-1/2 -mt-16" src="{% static 'images/illustration.svg' %}">
-                        <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">
-                            Adicionando Contas 
-                            <br>
-                            ao Dashboard - Tquiper
-                        </div>
-                        <div class="-intro-x mt-5 text-lg text-white text-opacity-70 dark:text-slate-400"></div>
-                    </div>
+ <div class="container sm:px-10">
+    <div class="block xl:grid grid-cols-2 gap-4">
+        <!-- BEGIN: Register Info -->
+        <div class="hidden xl:flex flex-col min-h-screen">
+            <a href="{% url 'dashboard' %}" class="-intro-x flex items-center pt-5">
+                <img alt="Midone - HTML Admin Template" class="w-6" src="{% static 'img/tquiper-30-anos.png' %}">
+                <span class="text-white text-lg ml-3"> Tquiper </span> 
+            </a>
+            <div class="my-auto">
+                <img alt="Midone - HTML Admin Template" class="-intro-x w-1/2 -mt-16" src="{% static 'images/illustration.svg' %}">
+                <div class="-intro-x text-white font-medium text-4xl leading-tight mt-10">
+                    Criar conta
+                    <br>
+                    conta
                 </div>
-                <!-- END: Register Info -->
-                <!-- BEGIN: Register Form -->
-                
-                <div class="h-screen xl:h-auto flex py-6 xl:py-0 my-10 xl:my-0">
-                    <div class="my-auto mx-auto xl:ml-20 xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto">
-                        <h2 class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left">
-                            Registrar Usuário
-                        </h2>
-                        <div class="intro-x mt-2 text-slate-400 dark:text-slate-400 xl:hidden text-center">Adicionando Contas ao Dashboard - Tquiper</div>
-
-                        <form method="POST">
-                            {% csrf_token %}
-                        <div class="intro-x mt-8">
-                            <input type="text" id='username' name="username" class="intro-x login__input form-control py-3 px-4 block" placeholder="Usuário"  style="border-style: solid; border-color:white; border-radius: 10px;">
-
-                            <input type="text" id='company' name="company" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Empresa" style="border-style: solid; border-color:white; border-radius: 10px;">
-
-                            <input type="text" id='email' name="email" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Email" style="border-style: solid; border-color:white; border-radius: 10px;">
-
-                            <input type="password"  id ='password1' name="password1" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Senha" style="border-style: solid; border-color:white; border-radius: 10px;">
-                            <input type="password" id='password2' name="password2" class=" intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Confirmar Senha"  style="border-style: solid; border-color:white; --bs-border-opacity: .5; border-radius: 10px;">
-                            <div class="mt-5">
-                                <p>Imagem do Contrato</p>
-                            </div>
-
-                            <div class="input-group mt-2">
-
-                                <label for="input">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
-                                        <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                                      </svg>    
-                                </label>
-                                <input type="file" id="input" name="" style="display: none; visibility: none;"> 
-
-                              </div>
-    
-                        </div>
-                            <div class="intro-x flex items-center text-slate-600 dark:text-slate-500 mt-4 text-xs sm:text-sm">
-                                      <input class="form-check-input"style="border-style: solid; border-color: white" onclick="see_pass()" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Ver senha</label>
-                            </div>
-                            <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left" style="display: flex; justify-content: center;">
-                                <button  type="submit" class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top">
-                                Register</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- END: Register Form -->
+                <div class="-intro-x mt-5 text-lg text-white text-opacity-70 dark:text-slate-400">Tquiper User Create</div>
             </div>
         </div>
-<script>
-    function see_pass() {
-          var x = document.getElementById("password1");
-          var y = document.getElementById('password2');
-          if (x.type === "password" && y.type == 'password') {
-            x.type = "text";
-            y.type = 'text';
-          } else {
-            x.type = "password";
-            y.type = 'password';
-          }
-        }
-</script>
+        <!-- END: Register Info -->
+        <!-- BEGIN: Register Form -->
+        <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0">
+            <div class="my-auto mx-auto xl:ml-20 bg-white dark:bg-darkmode-600 xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto">
+                <h2 class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left">
+                    Registro
+                </h2>
+                <div class="intro-x mt-2 text-slate-400 dark:text-slate-400 xl:hidden text-center"></div>
+                <div class="intro-x mt-8" method = 'POST'>
+                    <input type="text" class="intro-x login__input form-control py-3 px-4 block" placeholder="Usuario" id="Usuario">
+                    <input type="text" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Empresa" id="Empresa">
+                    <input type="text" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Nome" id="Nome">
+                    <input type="text" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Sobrenome" id="Sobrenome">
+                    <input type="text" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Email" id="email">
+                    <input  id='pass1' oninput="checkPasswordStrength(this.value); checkPasswords();" type="password" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Password">
+                    <div class="intro-x w-full grid grid-cols-12 gap-4 h-1 mt-3">
+                        <div id = "color1"></div>
+                        <div id = "color2"></div>
+                        <div id = "color3"></div>
+                    </div>
+                    <div class="" id="password-strength"></div>
+                    <input id='pass2' oninput="checkPasswords()" type="password" class="intro-x login__input form-control py-3 px-4 block mt-4" placeholder="Password Confirmation">
+                    <div class="mt-2" id="password-confirmation"></div>
+                </div>
+                <div class="intro-x mt-1 xl:mt-8 text-center xl:text-left">
+                    <button  type="submit" class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top">Registrar</button>
+                </div>
+            </div>
+        </div>
+        <!-- END: Register Form -->
+    </div>
+</div>

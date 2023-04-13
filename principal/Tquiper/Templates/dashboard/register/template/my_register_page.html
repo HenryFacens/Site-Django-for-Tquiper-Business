@@ -1,0 +1,84 @@
+{% load static %}
+<div class="intro-y box mt-5">
+    <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
+        <!-- <h2 class="font-medium text-base mr-auto">
+            Password
+        </h2> -->
+        <div class="form-check form-switch w-full sm:w-auto sm:ml-auto mt-3 sm:mt-0">
+            <label class="form-check-label ml-0" for="show-example-4">Show example code</label>
+            <input id="show-example-4" data-target="#input-state" class="show-code form-check-input mr-0 ml-3" type="checkbox">
+        </div>
+    </div>
+    <div id="input-state" class="p-5">
+        <div class="preview">
+            <div>
+                <label for="input-state-1" class="form-label">Senha</label>
+                <input id="input-state-1" type="password" name=''class="form-control border-success" placeholder="Password" oninput="checkPasswordStrength(this.value)">
+                <div id="strongpass"  class="w-full grid grid-cols-12 gap-4 h-1 mt-3">
+                    <div id = "color1"></div>
+                    <div id = "color2"></div>
+                    <div id = "color3"></div>
+                    <!-- <div class="col-span-3 h-full rounded bg-slate-100 dark:bg-darkmode-800"></div> -->
+                </div>
+                <div class="" id="password-strength"></div>
+            </div>
+        </div>
+        <div class="source-code hidden">
+            <button data-target="#copy-input-state" class="copy-code btn py-1 px-2 btn-outline-secondary"> <i data-lucide="file" class="w-4 h-4 mr-2"></i> Copy example code </button>
+            <div class="overflow-y-auto mt-3 rounded-md">
+                <pre id="copy-input-state" class="source-preview"> <code class="html"> HTMLOpenTagdivHTMLCloseTag HTMLOpenTaglabel for=&quot;input-state-1&quot; class=&quot;form-label&quot;HTMLCloseTagInput SuccessHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;input-state-1&quot; type=&quot;text&quot; class=&quot;form-control border-success&quot; placeholder=&quot;Input text&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;w-full grid grid-cols-12 gap-4 h-1 mt-3&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-3 h-full rounded bg-success&quot;HTMLCloseTagHTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-3 h-full rounded bg-success&quot;HTMLCloseTagHTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-3 h-full rounded bg-success&quot;HTMLCloseTagHTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-3 h-full rounded bg-slate-100 dark:bg-darkmode-800&quot;HTMLCloseTagHTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;text-success mt-2&quot;HTMLCloseTagStrong passwordHTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;mt-3&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;input-state-2&quot; class=&quot;form-label&quot;HTMLCloseTagInput WarningHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;input-state-2&quot; type=&quot;text&quot; class=&quot;form-control border-warning&quot; placeholder=&quot;Input text&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;text-warning mt-2&quot;HTMLCloseTagAttempting to reconnect to server...HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;mt-3&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;input-state-3&quot; class=&quot;form-label&quot;HTMLCloseTagInput ErrorHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;input-state-3&quot; type=&quot;text&quot; class=&quot;form-control border-danger&quot; placeholder=&quot;Input text&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;text-danger mt-2&quot;HTMLCloseTagThis field is requiredHTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag </code> </pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    // newlable.innerHTML  = "";
+
+    
+
+    function checkPasswordStrength(password) {
+
+      let strength = 0;
+      
+      if (password.length >= 8) strength++;
+      if (/[A-Z]/.test(password)) strength++;
+      if (/[a-z]/.test(password)) strength++;
+      if (/[0-9]/.test(password)) strength++;
+      if (/[^A-Za-z0-9]/.test(password)) strength++;
+    
+      console.log(strength);
+      let passwordStrengthElement = document.getElementById("password-strength");
+      let changecolor1            = document.getElementById("color1");
+      let changecolor2            = document.getElementById("color2");
+      let changecolor3            = document.getElementById("color3");
+
+        changecolor1.classList = "";
+        changecolor2.classList = "";
+        changecolor3.classList = "";
+        passwordStrengthElement.classList = "";
+
+      if (strength === 0) {
+        passwordStrengthElement.innerHTML = "";
+      } else if (strength <= 2) {
+        passwordStrengthElement.innerHTML = "Senha fraca";
+        passwordStrengthElement.classList.add("text-danger","mt-2");
+        console.log("Entrou");
+        changecolor1.classList = "col-span-3 h-full rounded bg-danger";
+      } else if (strength <= 4) {
+        passwordStrengthElement.innerHTML = "Senha média";
+        passwordStrengthElement.classList.add("text-warning","mt-2");
+        changecolor1.classList  = "col-span-3 h-full rounded bg-warning";
+        changecolor2.classList = "col-span-3 h-full rounded bg-warning";
+      } else{
+        passwordStrengthElement.innerHTML = "Senha forte";
+        passwordStrengthElement.classList.add("text-primary","mt-2");
+        changecolor1.classList = "col-span-3 h-full rounded bg-success";
+        changecolor2.classList = "col-span-3 h-full rounded bg-success";
+        changecolor3.classList = "col-span-3 h-full rounded bg-success";
+      }
+    }
+  </script>
