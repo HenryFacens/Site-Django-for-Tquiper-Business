@@ -4,14 +4,14 @@
     <nav class="side-nav">
         <ul>
             <li>
-                <a href="javascript:;.html" class="side-menu side-menu--active">
+                <a href="javascript:;" class="side-menu">
                     <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
                     <div class="side-menu__title">
                         Dashboard 
-                        <div class="side-menu__sub-icon transform rotate-180"> <i data-lucide="chevron-down"></i> </div>
+                        <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
                     </div>
                 </a>
-                <ul class="side-menu__sub-open">
+                <ul class="">
                     <li>
                         <a href="{% url 'dashboard' %}" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
@@ -19,7 +19,6 @@
                         </a>
                     </li>
                 </ul>
-            </li>
             <li>
                 <a href="javascript:;" class="side-menu">
                     <div class="side-menu__icon"> <i data-lucide="shopping-bag"></i> </div>
@@ -178,23 +177,24 @@
                     </li>
                 </ul>
             </li>
+        
             <li>
-                <a href="#" class="side-menu">
+                <a href="javascript:;.html" class="side-menu side-menu--active">
                     <div class="side-menu__icon"> <i data-lucide="users"></i> </div>
                     <div class="side-menu__title">
-                        Usuários
-                        <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        Usuários 
+                        <div class="side-menu__sub-icon transform rotate-180"> <i data-lucide="chevron-down"></i> </div>
                     </div>
                 </a>
-                <ul class="">
-                    <li>
-                        <a href="{% url 'users' %}" class="side-menu">
+                <ul class="side-menu__sub-open">
+                        <a href="side-menu-dark-users-layout-3.html" class="side-menu side-menu--active">
                             <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
                             <div class="side-menu__title"> Usuários </div>
                         </a>
                     </li>
                 </ul>
             </li>
+
             <li>
                 <a href="javascript:;" class="side-menu">
                     <div class="side-menu__icon"> <i data-lucide="trello"></i> </div>
