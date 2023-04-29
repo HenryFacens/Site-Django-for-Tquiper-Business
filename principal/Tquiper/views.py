@@ -12,6 +12,8 @@ from Tquiper.forms import RegisterForm
 from .models import Company
 from django.views.decorators.http import require_GET, require_POST
 
+def chat(request):
+    return render(request, 'dashboard/messages/template/base.html')
 
 def users(request):
     return render(request , 'dashboard/Users/template/base.html')

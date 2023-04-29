@@ -5,13 +5,12 @@
 	{% include 'dashboard/template/head.html' %}
 </head>
 	<body class="py-5 md:py-0">
-		{% include 'dashboard/Users/template/mobile_top.html' %}
-		<!-- {% include 'dashboard/template/mobile_top.html' %} -->
+		{% include 'dashboard/template/mobile_top.html' %}
 		{% include 'dashboard/template/top_bar.html' %}
 			<div class="page-content">	
 						<div class="main-container ">
-							{% include 'dashboard/Users/template/side_menu.html' %}
-							{% include 'dashboard/Users/template/user.html' %}
+							{% include 'dashboard/messages/template/side_menu.html' %}
+							{% include 'dashboard/messages/template/message.html' %}
 							{% block content %}
 							{% endblock %}
 					</div>
