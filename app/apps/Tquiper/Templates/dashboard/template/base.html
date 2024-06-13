@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+
+	{% include 'dashboard/template/head.html' %}
+</head>
+	<body>
+			{% include 'dashboard/template/mobile_top.html' %}
+			{% include 'dashboard/template/top_bar.html' %}
+			
+			<div class="page-content">	
+				
+				
+
+				<div class="main-container">
+					{% include 'dashboard/template/side_menu.html' %}
+					{% include 'dashboard/template/content.html' %}
+					{% block content %}
+					{% endblock %}
+
+				</div>
+			</div>
+		</div>
+	</body>
+	{% include 'dashboard/template/extras.html' %}
+
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+</div> 
+
+<footer id="rs-footer" class="rs-footer footer-main-home footer-style1">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="col-lg-5 pr-20 md-pr-15 md-mb-20">
+                    <div class="footer-logo mb-51 md-mb-30">
+                        <a href="{% url 'Site' %}"><img src="{% static 'img/logo-tquiper-rodape-1.png' %}" alt=""></a>
+                    </div>
+                    <div class="textwidget">
+                        <p class="pb-20">Temos os melhores profissionais do ramo, todos capacitados e constantemente treinados para 
+                            oferecer segurança e qualidade nos serviços que prestamos.</p>
+                        <p class="pb-25"><strong>Horário de funcinamento: </strong><br>Segunda a sexta
+                            07:00 as 17:00</p>
+                    </div>
+                    <!-- <ul class="footer-social md-mb-30">   -->
+                        <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                      -->
+                        <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li>                     
+                        <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>                     
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>                      -->
+                      <!-- </ul> -->
+                </div>
+                        <div class="col-lg-3">
+                            <h3 class="footer-title">Informação de Contato</h3>
+                            <ul class="address-widget">
+                                <li>
+                                    <i class="fi fi-rr-map-marker-home"></i>
+                                    <div class="desc">
+                                        Av. Presidente Wilson 1009 CJ 757<br>
+                                        Mooca - São Paulo - SP Cep: 03107-002
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fi fi-rr-phone-call"></i>
+                                    <div class="desc">
+                                    <a href="tel:(+880)15569569365">(11) 2591-0102</a><br>
+                                    <a href="tel:(+880)15569569366">(11) 2591-0137</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fi fi-rr-envelope-plus"></i>
+                                    <div class="desc">
+                                        <a href="mailto:support@devsdesign.com">comercial@tquiper.com.br</a><br>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                <div class="col-lg-3">
+                    <h3 class="footer-title" style="display: flex; justify-content: center;">login</h3>
+                    <div class="btn-part" style="display: flex; justify-content: center;">                                            
+                        <div class="form-group mb-0" >
+                            <input class="readon more submit" type="submit" value="Login Page" onclick="location.href='{% url 'login' %}'">
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">                    
+            <div class="row y-middle">
+                <div class="col-lg-6 md-mb-10 text-lg-end text-center order-last">
+                    <ul class="copy-right-menu">
+                        <li><a href="{% url 'sobrenos' %}">QUEM SOMOS</a></li>
+                        <li><a href="{% url 'servico' %}">SERVIÇOS</a></li>
+                        <li><a href="{% url 'contatos' %}">CONTATOS</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="copyright text-lg-start text-center">
+                        <p>© 2022 TQuiper Transporte e Locação de Equipamentos | Todos direitos reservados | Henry Santurião Almeida <a href="https://github.com/HenryFacens" target="blank">GitHub</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

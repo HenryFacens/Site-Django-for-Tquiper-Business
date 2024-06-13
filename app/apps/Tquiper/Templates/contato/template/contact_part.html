@@ -1,0 +1,113 @@
+{% load static %}
+			<!-- Breadcrumbs Start -->
+			<div class="rs-breadcrumbs img6">
+			    <div class="container">
+			        <div class="breadcrumbs-inner">
+			            <h1 class="page-title">
+							Contate-nos
+			            </h1>
+			            <ul class="breadcrumbs-area">
+                           <li title="Go to konstruk">
+                               <a class="active" href="{% url 'Site' %}">Home</a>
+                           </li>
+                          <li>Contate-nos</li>
+                       </ul>
+			        </div>
+			    </div>
+			</div>
+			<!-- Breadcrumbs End -->
+		
+			<!-- Contact Section Start -->
+			<div class="rs-contact contact-style6 pb-120 md-pb-80">
+			    <div class="row no-gutters">
+			    	<div class="col-lg-4">
+			    		<div class="contact-map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.225898566914!2d-46.61039294890395!3d-23.56032896736527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5940d6e85911%3A0xab835277e02ada67!2sAv.%20Presidente%20Wilson%2C%20715%20-%20Mooca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003107-000!5e0!3m2!1spt-BR!2sbr!4v1676569070418!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			    		</div>
+			    	</div>
+			        <div class="col-lg-4">
+        				<div class="contact-section">
+                            <div class="contact-wrap">
+                            	<div class="sec-title mb-60">
+                            		<h2 class="title title4 ser-style4">Entrar em contato</h2>
+                            	</div>
+								<!-- <center style="color: white;">
+									<h2> Obrigado {{ msg }} !</h2>
+									<p>Recebemos seu e-mail e entraremos em contato em breve</p>
+								</center>
+								<br/><br/><br/> -->
+                                <form id="contact-form">
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                                <input class="from-control" type="text" id="name" name="name" placeholder="Nome" required="">
+                                            </div> 
+                                            <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                                <input class="from-control" type="text" id="email" name="email" placeholder="E-Mail" required="">
+                                            </div>   
+                                            <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                                <input class="from-control" type="text" id="phone" name="phone" placeholder="Numero do Telefone" required="">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+                                                <input class="from-control" type="text" id="website" name="website" placeholder="instituição" required="">
+                                            </div>
+                                            <div class="col-lg-12 mb-30">
+                                                <textarea class="from-control" id="message" name="message" placeholder="Sua mensagem" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="btn-part">                                            
+                                            <div class="mb-0">
+                                                <input class="readon more submit sub-con" type="submit" value="Enviar">
+                                            </div>
+                                        </div> 
+                                    </fieldset>
+                                </form> 
+                            </div>
+                        </div>
+			        </div>
+			        <div class="col-lg-4 contact-project"></div>
+			    </div>
+			    <!-- Contact Icons Section End -->
+			    <div class="rs-contact pt-120 md-pt-80">
+			        <div class="container">
+			            <div class="row">
+			                <div class="col-lg-4 col-md-6 md-mb-30">
+			                   <div class="contact-box">
+			                       <div class="contact-icon">
+			                           <img src="{% static 'images/contact/icones/icons8-google-maps-500.png' %}" alt="images">
+			                       </div>
+			                       <div class="content-text">
+			                           <h4 class="title"><a href="https://goo.gl/maps/Wf2ccE2yueQDVbhGA">Endereço</a></h4>
+			                           <p class="services-txt"> Av. Presidente Wilson 1009 CJ 757<br>Mooca - São Paulo - SP Cep: 03107-002</p>
+			                       </div>
+			                   </div>
+			                </div>
+			                <div class="col-lg-4 col-md-6 sm-mb-30">
+			                   <div class="contact-box">
+			                       <div class="contact-icon">
+			                           <img src="{% static 'images/contact/icones/icons8-nova-mensagem-100.png' %}" alt="images">
+			                       </div>
+			                       <div class="content-text">
+			                           <h4 class="title"><a href="#">Email</a></h4>
+			                           <span><a href="mailto:comercial@tquiper.com.br">comercial@tquiper.com.br</a></span><br>
+			                       </div>
+			                   </div>
+			                </div>
+			                <div class="col-lg-4 col-md-6">
+			                   <div class="contact-box">
+			                       <div class="contact-icon">
+			                           <img src="{% static 'images/contact/icones/icons8-volume-da-campainha-100.png' %}" alt="images">
+			                       </div>
+			                       <div class="content-text">
+			                           <h4 class="title"><a href="https://api.whatsapp.com/send/?phone=5511977429215&text=Olá%21+Quero+fazer+um+orçamento+ou+proposta&type=phone_number&app_absent=0">Ligue</a></h4>
+			                           <span><a href="tel:(+088)589-8745">(11) 2591-0102</a></span><br>
+			                          	<span> <a href="tel:(+088)222-9999">(11) 2591-0137</a></span>
+			                       </div>
+			                   </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <!-- Contact Icons Section End -->
+			</div>
+			<!-- Contact Section End -->

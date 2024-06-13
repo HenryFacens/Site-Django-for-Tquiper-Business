@@ -1,0 +1,55 @@
+{% load static %}
+
+<div id="rs-slider" class="rs-slider rs-slider-style2 rs-slider-style5">
+    <div class="bend niceties">
+        <div id="nivoSlider" class="slides">
+            <img src="{% static 'img/3escavadeira.jpeg' %}" alt="" title="#slide-1"/>
+            <img src="{% static 'img/2escavadeira.jpeg' %}" alt="" title="#slide-2" />
+        </div>
+           <!-- Slide 1 -->
+           <div id="slide-1" class="slider-direction">
+              <div class="container">
+                      <div class="content-part">
+                          <span class="sl-subtitle">
+                              <img class="sl-icons" src="{% static 'img/icone.png' %}" alt="Images">
+                              Tquiper
+                          </span>
+                          <h1 class="sl-title " >
+                              Melhor cobertura de <br>
+                              soluções        		           		    								
+                          </h1>
+                          <p class="sl-desc" >
+                            Aproveite as estruturas ágeis para fornecer uma estruturas robusta para alta<br> 
+                              demanda do mercado.  		
+                          </p>
+                             <div class="slider-bottom">
+                                 <a class="readon red-btn" href="{% url 'contatos' %}">Descubra Mais</a>
+                             </div>
+                      </div>
+              </div>
+           </div>
+           <!-- Slide 2 -->
+           <div id="slide-2" class="slider-direction">
+               <div class="container">
+                   <div class="content-part">
+                       <span class="sl-subtitle">
+                           <img class="sl-icons" src="{% static 'img/icone.png' %}" alt="Images">
+                           Tquiper
+                       </span>
+                       <h1 class="sl-title">
+                           Melhor Eficiência do<br>
+                           Mercado        
+                       </h1>
+                       <p class="sl-desc">
+                           Adaptamos a máquina para qualquer<br> 
+                           advercidades. 
+                       </p>
+                          <div class="slider-bottom">
+                              <a class="readon red-btn" href="{% url 'contatos' %}">Descubra Mais</a>
+                          </div>
+                   </div>
+               </div>
+           </div>
+    </div>
+</div>
+<!-- Slider End -->
