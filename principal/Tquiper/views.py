@@ -53,12 +53,12 @@ def saiu(request):
 def my_account(request):
 
     if request.method == "POST":
-
+        print("Entrou")
         username = request.POST["username"]
         password = request.POST["password"]
 
         user = authenticate(username=username, password=password)
-
+        print(user)
         if user is not None:
             login(request, user)
             return redirect("dashboard")
