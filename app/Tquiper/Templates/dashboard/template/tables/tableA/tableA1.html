@@ -1,0 +1,145 @@
+{% load static %}
+<div class="intro-y box mt-5">
+    <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60">
+        <h2 class="font-medium text-base mr-auto">
+            A.1 - Mão de Obra Direta
+        </h2>
+    </div>
+    <div class="p-5" id="bordered-table">
+        <div class="preview">
+            <div class="overflow-x-auto">
+                <table class="table table-bordered" id="TableA1">
+                    <thead>
+                        <tr>
+                            <th class="whitespace-nowrap">Categoria Profissional</th>
+                            <th class="whitespace-nowrap">R$ Mês</th>
+                            <th class="whitespace-nowrap">Quant.</th>
+                            <th class="whitespace-nowrap">SubTotal Por</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Encarregado Geral</td>
+                            <td><input id="A1.1.1" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.1" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.1" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Operador - Guindaste</td>
+                            <td><input id="A1.1.2" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.2" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.2" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ajundate Geral</td>
+                            <td><input id="A1.1.3" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.3" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.3" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Adicional Noturno</td>
+                            <td><input id="A1.1.4" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.4" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.4" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Insalubridade</td>
+                            <td><input id="A1.1.5" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.5" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.5" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hora Extra 50% (Operador)</td>
+                            <td><input id="A1.1.6" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.6" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.6" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hora Extra 100% (Operador)</td>
+                            <td><input id="A1.1.7" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.7" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.7" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hora Extra 50% (Ajudante)</td>
+                            <td><input id="A1.1.8" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.8" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.8" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hora Extra 100% (Ajudante)</td>
+                            <td><input id="A1.1.9" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.9" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.9" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Periculosidade</td>
+                            <td><input id="A1.1.10" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A1.2.10" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A1.3.10" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>SubTotal (1): </td>
+                            <td><input id="sum.A1" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="flex items-center" style="justify-content: space-between;">
+                                    Encargos Sociais (2):
+                                    <div class="flex">
+                                        <input id="encargos.A1" type="text" class="form-control" placeholder="%">
+                                    </div>
+                                </div>
+                            </td>
+                            <td><input id="encargos.A1.total" type="text" class="form-control" placeholder="%" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Total A.1 (1 + 2): </td>
+                            <td><input id="total.A1" type="text" class="form-control" placeholder="R$ SubTotal"
+                                    disabled>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

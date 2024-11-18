@@ -1,0 +1,167 @@
+{% load static %}
+<div class="intro-y box mt-5">
+    <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60">
+        <h2 class="font-medium text-base mr-auto">
+            B.1.A - Custos Corporativos - Fixos - Rateios
+        </h2>
+    </div>
+    <div class="p-5" id="bordered-table">
+        <div class="preview">
+            <div class="overflow-x-auto">
+                <table class="table table-bordered" id="TableB1A">
+                    <thead>
+                        <tr>
+                            <th class="whitespace-nowrap">Descrição</th>
+                            <th class="whitespace-nowrap">Valor Bruto Anual</th>
+                            <th class="whitespace-nowrap">Qtde. Meses</th>
+                            <th class="whitespace-nowrap">Qtde. Clientes</th>
+                            <th class="whitespace-nowrap">Valor do Rateio</th>
+                            <th class="whitespace-nowrap">Parcela Mensal Aplicada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Seguro Veiculos</td>
+                            <td><input id="B1A.1.1" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.1" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.1" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.1" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.1" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Seguro Máquinas</td>
+                            <td><input id="B1A.1.2" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.2" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.2" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.2" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.2" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Licenciamento de Autos</td>
+                            <td><input id="B1A.1.3" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.3" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.3" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.3" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.3" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Telefonia</td>
+                            <td><input id="B1A.1.4" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.4" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.4" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.4" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.4" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aluguel (Sede)</td>
+                            <td><input id="B1A.1.5" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.5" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.5" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.5" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.5" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aluguel (Outros)</td>
+                            <td><input id="B1A.1.6" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.6" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.6" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.6" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.6" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Água</td>
+                            <td><input id="B1A.1.7" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.7" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.7" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.7" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.7" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Energia</td>
+                            <td><input id="B1A.1.8" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.8" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.8" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.8" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.8" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pedágios / Viagens</td>
+                            <td><input id="B1A.1.9" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.9" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.9" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.9" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.9" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Custos Trabalhistas</td>
+                            <td><input id="B1A.1.10" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.10" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.10" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.10" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.10" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Custos Contábil</td>
+                            <td><input id="B1A.1.11" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.11" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.11" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.11" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.11" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Custos Diversos</td>
+                            <td><input id="B1A.1.12" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.12" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.12" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.12" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.12" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Outros</td>
+                            <td><input id="B1A.1.13" type="text" class="form-control" placeholder="R$ Anual"></td>
+                            <td><input id="B1A.2.13" type="text" class="form-control" placeholder="Qtde. Meses"></td>
+                            <td><input id="B1A.3.13" type="text" class="form-control" placeholder="Qtde. Clientes"></td>
+                            <td><input id="B1A.4.13" type="text" class="form-control" placeholder="R$ Rateio" disabled>
+                            </td>
+                            <td><input id="B1A.5.13" type="text" class="form-control" placeholder="R$ Parcela" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>SubTotal B.1.A: </td>
+                            <td><input id="sum.B1A" type="text" class="form-control" placeholder="R$ SubTotal" disabled>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+{% load static %}
+<div class="intro-y box mt-5">
+    <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60">
+        <h2 class="font-medium text-base mr-auto">
+            C.3 - Manutenção
+        </h2>
+    </div>
+    <div class="p-5" id="bordered-table">
+        <div class="preview">
+            <div class="overflow-x-auto">
+                <table class="table table-bordered" id="TableC3">
+                    <thead>
+                        <tr>
+                            <th class="whitespace-nowrap">Descrição da Manutenção</th>
+                            <th class="whitespace-nowrap">Valor Unit.</th>
+                            <th class="whitespace-nowrap">Quant.</th>
+                            <th class="whitespace-nowrap">SubTotal (R$ Mês)</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input id="C3.1.1" type="text" class="form-control" placeholder="Descrição">
+                            <td><input id="C3.2.1" type="text" class="form-control" placeholder="Valor Unit.">
+                            </td>
+                            <td><input id="C3.3.1" type="text" class="form-control" placeholder="Quant.">
+                            </td>
+                            <td><input id="C3.4.1" type="text" class="form-control" placeholder="SubTotal">
+                        </tr>
+                        <tr>
+                            <td><input id="C3.1.2" type="text" class="form-control" placeholder="Descrição">
+                            <td><input id="C3.2.2" type="text" class="form-control" placeholder="Valor Unit.">
+                            </td>
+                            <td><input id="C3.3.2" type="text" class="form-control" placeholder="Quant.">
+                            </td>
+                            <td><input id="C3.4.2" type="text" class="form-control" placeholder="SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>SubTotal C.3: </td>
+                            <td><input id="sum.C3" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,184 @@
+{% load static %}
+<div class="intro-y box mt-5">
+    <div class="flex flex-col sm:flex-row sm:items-end xl:items-start p-5">
+        <div class="ml-auto sm:ml-0" style="position: relative;">
+            <!-- Botão para abrir o modal -->
+            <button type="button" class="btn btn-outline-secondary w-1/2 sm:w-auto mr-2" id="openModalSearch">
+                <span class="w-5 h-5 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        icon-name="plus" class="lucide lucide-plus w-4 h-4" data-lucide="plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary w-1/2 sm:w-auto mr-2" id="clearAllCache">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    icon-name="refresh-cw" data-lucide="refresh-cw" class="lucide lucide-refresh-cw w-4 h-4">
+                    <path d="M21 2v6h-6"></path>
+                    <path d="M3 12a9 9 0 0115-6.7L21 8"></path>
+                    <path d="M3 22v-6h6"></path>
+                    <path d="M21 12a9 9 0 01-15 6.7L3 16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <dialog id="modalSearch" class="w-1/2">
+            <div>
+                <div class="flex">
+                    <h3 class="text-lg font-medium text-gray-900">Novo Cliente</h3>
+                </div>
+
+                <div class="mt-4">
+                    <form id="empresa-form" action="{% url 'registrar_empresa' %}" method="post" class="validate-form">
+                        {% csrf_token %}
+                        <div class="input-form"> <label for="validation-form-1"
+                                class="form-label w-full flex flex-col sm:flex-row"> <span
+                                    class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Requer um mínimo de 2
+                                    characters</span> </label> <input id="validation-form-1" type="text" name="name"
+                                class="form-control" placeholder="VALE" minlength="2" required> </div>
+                        <div class="input-form mt-3"> <label for="validation-form-5"
+                                class="form-label w-full flex flex-col sm:flex-row"> {{ form.site }}<span
+                                    class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Opcional</span>
+                            </label> <input id="validation-form-5" type="url" name="url" class="form-control"
+                                placeholder="https://www.vale.com/"> </div>
+                        <div class="input-form mt-3"> <label for="validation-form-6"
+                                class="form-label w-full flex flex-col sm:flex-row"> {{ form.comentario }}</label>
+                            <textarea id="validation-form-6" class="form-control" name="comment"
+                                placeholder="Comentario..." minlength="2" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-5">Registrar</button>
+                        <button type="button" class="btn btn-primary mt-5 btn btn-danger" id="closeModalSearch">Cancelar
+                            </but ton>
+
+                    </form>
+                    <div id="success-notification-content" class="toastify-content hidden flex"> <i class="text-success"
+                            data-lucide="check-circle"></i>
+                        <div class="ml-4 mr-4">
+                            <div class="font-medium">Registration success!</div>
+                            <div class="text-slate-500 mt-1"> Please check your e-mail for further info! </div>
+                        </div>
+                    </div> <!-- END: Success Notification Content --> <!-- BEGIN: Failed Notification Content -->
+                    <div id="failed-notification-content" class="toastify-content hidden flex"> <i class="text-danger"
+                            data-lucide="x-circle"></i>
+                        <div class="ml-4 mr-4">
+                            <div class="font-medium">Registration failed!</div>
+                            <div class="text-slate-500 mt-1"> Please check the fileld form. </div>
+                        </div>
+                    </div> <!-- END: Failed Notification Content -->
+                </div>
+            </div>
+        </dialog>
+
+        <div class="sm:flex items-center sm:mr-4 mt-2 xl:mt-0">
+            <label class="w-12 flex-none xl:w-auto xl:flex-initial mr-2">Cliente: </label>
+            <input id="tabulator-html-filter-value" type="text" class="form-control mt-2 sm:mt-0" style="width: 100%;"
+                placeholder="Procurar...">
+        </div>
+        <div class="sm:flex items-center sm:mr-4">
+            <label class="w-12 flex-none xl:w-auto xl:flex-initial mr-2">Registro: </label>
+            <input id="regular-form-5" type="text" class="form-control" placeholder="" disabled>
+        </div>
+
+        <div class="sm:flex items-center sm:mr-4 mt-2 xl:mt-0">
+            <label class="w-12 flex-none xl:w-auto xl:flex-initial mr-2">Data: </label>
+            <div class="relative w-56 mx-auto">
+                <div
+                    class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        icon-name="calendar" data-lucide="calendar" class="lucide lucide-calendar w-4 h-4">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </div>
+                <input type="text" class="datepicker form-control pl-12" data-single-mode="true" disabled>
+            </div>
+        </div>
+        <div class="flex mt-5 sm:mt-0">
+            <button id="tabulator-print" class="btn btn-outline-secondary w-1/2 sm:w-auto mr-2"> <svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    icon-name="printer" data-lucide="printer" class="lucide lucide-printer w-4 h-4 mr-2">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                </svg> Imprimir </button>
+            <div class="dropdown w-1/2 sm:w-auto">
+                <button class="dropdown-toggle btn btn-outline-secondary w-full sm:w-auto" aria-expanded="false"
+                    data-tw-toggle="dropdown"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" icon-name="file-text" data-lucide="file-text"
+                        class="lucide lucide-file-text w-4 h-4 mr-2">
+                        <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <line x1="10" y1="9" x2="8" y2="9"></line>
+                    </svg> Exportar <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" icon-name="chevron-down" data-lucide="chevron-down"
+                        class="lucide lucide-chevron-down w-4 h-4 ml-auto sm:ml-2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg> </button>
+                <div class="dropdown-menu w-40">
+                    <ul class="dropdown-content">
+                        <li>
+                            <a id="tabulator-export-csv" href="javascript:;" class="dropdown-item"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" icon-name="file-text" data-lucide="file-text"
+                                    class="lucide lucide-file-text w-4 h-4 mr-2">
+                                    <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                                </svg> Exportar CSV </a>
+                        </li>
+                        <li>
+                            <a id="tabulator-export-xlsx" href="javascript:;" class="dropdown-item"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" icon-name="file-text" data-lucide="file-text"
+                                    class="lucide lucide-file-text w-4 h-4 mr-2">
+                                    <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                                </svg> Exportar XLSX </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Exemplo de captura de sucesso ou erro no envio do formulário
+    document.getElementById('empresa-form').onsubmit = function (event) {
+        event.preventDefault();
+        const form = event.target;
+        console.log(form.action);
+        console.log(form.method);
+        console.log(new FormData(form));
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert('Empresa registrada com sucesso!');
+                    closeModal();
+                } else {
+                    alert('Erro ao registrar a empresa.');
+                }
+            });
+    };
+</script>

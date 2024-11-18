@@ -1,0 +1,141 @@
+<div class="content">
+    <div class="intro-y p-5 mt-5">
+        <div class="overflow-x-auto scrollbar-hidden">
+            {% include 'dashboard/template/searchClient.html' %}
+            <div class="table-group" id="group-A">
+                {% include 'dashboard/template/tables/tableA/tableA1.html' %}
+                {% include 'dashboard/template/tables/tableA/tableA2.html' %}
+                {% include 'dashboard/template/tables/tableA/tableA3.html' %}
+            </div>
+            <div class="table-group hidden" id="group-B">
+                {% include 'dashboard/template/tables/tableB/tableB1.html' %}
+                {% include 'dashboard/template/tables/tableB/tableB1A.html' %}
+                {% include 'dashboard/template/tables/tableB/tableB2.html' %}
+                {% include 'dashboard/template/tables/tableB/tableB3.html' %}
+                {% include 'dashboard/template/tables/tableB/tableB4.html' %}
+            </div>
+
+            <div class="table-group hidden" id="group-C">
+                {% include 'dashboard/template/tables/tableC/tableC1.html' %}
+                {% include 'dashboard/template/tables/tableC/tableC2.html' %}
+                {% include 'dashboard/template/tables/tableC/tableC3.html' %}
+                {% include 'dashboard/template/tables/tableC/tableC4.html' %}
+            </div>
+            <div class="table-group hidden" id="group-D">
+                {% include 'dashboard/template/tables/tableD/tableD1.html' %}
+                {% include 'dashboard/template/tables/tableD/tableD2.html' %}
+            </div>
+            <div class="table-group hidden" id="grupo-OSC">
+                {% include 'dashboard/template/tables/tableOSC/tableOSC.html' %}
+            </div>
+            <div class="table-group hidden" id="group-E">
+                {% include 'dashboard/template/tables/tableE/tableE1.html' %}
+            </div>
+            <div class="table-group hidden" id="group-F">
+                {% include 'dashboard/template/tables/tableF/tableF1.html' %}
+            </div>
+            <div class="table-group hidden" id="group-G">
+                {% include 'dashboard/template/tables/tableG/tableG1.html' %}
+
+            </div>
+            <div class="table-group hidden" id="group-finish">
+                {% include 'dashboard/template/tables/tableFinish/tableFinish.html' %}
+            </div>
+            <div class="table-group hidden" id="group-OBS">
+                {% include 'dashboard/template/tables/tableOBS/tableOBS.html' %}
+            </div>
+            <div class="intro-y box p5 mt-5">
+                <div class="bg-transparent mt-2 p-5">
+                    <span class="flex items-center">
+                        <div class="ml-1 mr-auto bg-transparent" style="
+                        padding-top: 0.5rem;
+                        padding-bottom: 0.5rem;
+                        padding-left: 0.75rem;
+                        padding-right: 2rem;
+                        "></div>
+                        <button class="btn mr-1 mb-2" type="button" role="button" aria-label="First Page"
+                            title="First Page" data-page="first"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                <path fill-rule="evenodd"
+                                    d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg></button>
+                        <button class="btn mr-1 mb-2" type="button" role="button" aria-label="Prev Page"
+                            title="Prev Page" data-page="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </button>
+                        <span class="" style="display: flex; align-items: center;"></span>
+                        <button class="btn mr-1 mb-2" type="button" role="button" aria-label="Next Page"
+                            title="Next Page" data-page="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </button>
+                        <button class="btn mr-1 mb-2" type="button" role="button" aria-label="Last Page"
+                            title="Last Page" data-page="last">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                                <path fill-rule="evenodd"
+                                    d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Seleciona todos os grupos
+        const groups = [
+            "group-A",
+            "group-B",
+            "group-C",
+            "group-D",
+            "grupo-OSC",
+            "group-E",
+            "group-F",
+            "group-G",
+            "group-finish",
+            "group-OBS",
+        ].map(id => document.getElementById(id));
+
+        // Índice atual do grupo visível
+        let currentGroupIndex = 0;
+
+        const buttons = document.querySelectorAll("button[data-page]");
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const page = button.getAttribute("data-page");
+
+                // Esconde o grupo atual
+                groups[currentGroupIndex].classList.add("hidden");
+
+                // Lógica para alternar entre os grupos
+                if (page === "next" && currentGroupIndex < groups.length - 1) {
+                    currentGroupIndex++;
+                } else if (page === "prev" && currentGroupIndex > 0) {
+                    currentGroupIndex--;
+                } else if (page === "first") {
+                    currentGroupIndex = 0;
+                } else if (page === "last") {
+                    currentGroupIndex = groups.length - 1;
+                }
+
+                // Mostra o novo grupo atual
+                groups[currentGroupIndex].classList.remove("hidden");
+            });
+        });
+    });
+</script>

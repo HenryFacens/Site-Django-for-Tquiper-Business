@@ -1,0 +1,154 @@
+{% load static %}
+<div class="intro-y box mt-5 ">
+    <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60">
+        <h2 class="font-medium text-base mr-auto">
+            A.3 - Outros Beneficios Convencão Coletiva
+        </h2>
+    </div>
+    <div class="p-5" id="bordered-table">
+        <div class="preview">
+            <div class="overflow-x-auto">
+                <table class="table table-bordered" id="TableA3">
+                    <thead>
+                        <tr>
+                            <th class="whitespace-nowrap">Categoria Profissional</th>
+                            <th class="whitespace-nowrap">Salario</th>
+                            <th class="whitespace-nowrap">Quant.</th>
+                            <div class="flex-col justify-content-between">
+                                <th class="whitespace-nowrap">PLR
+                                    <input id="A3.PLR" type="text" class="form-control ml-2" style="width: 50%;"
+                                        placeholder="%">
+                                </th>
+                                <th class="whitespace-nowrap">PTS
+                                    <input id="A3.PTS" type="text" class="form-control ml-2" style="width: 50%;"
+                                        placeholder="%">
+                                </th>
+                            </div>
+
+                            <th class="whitespace-nowrap">SubTotal (R$ Mês)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrativo</td>
+                            <td><input id="A3.1.1" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A3.2.1" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A3.3.1" type="text" class="form-control" placeholder="R$ PRL">
+                            </td>
+                            <td><input id="A3.4.1" type="text" class="form-control" placeholder="R$ PTS">
+                            </td>
+                            <td><input id="A3.5.1" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ajundates</td>
+                            <td><input id="A3.1.2" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A3.2.2" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A3.3.2" type="text" class="form-control" placeholder="R$ PRL">
+                            </td>
+                            <td><input id="A3.4.2" type="text" class="form-control" placeholder="R$ PTS">
+                            </td>
+                            <td><input id="A3.5.2" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Motoristas / Mecânico</td>
+                            <td><input id="A3.1.3" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A3.2.3" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A3.3.3" type="text" class="form-control" placeholder="R$ PRL">
+                            </td>
+                            <td><input id="A3.4.3" type="text" class="form-control" placeholder="R$ PTS">
+                            </td>
+                            <td><input id="A3.5.3" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Encarregados</td>
+                            <td><input id="A3.1.4" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A3.2.4" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A3.3.4" type="text" class="form-control" placeholder="R$ PRL">
+                            </td>
+                            <td><input id="A3.4.4" type="text" class="form-control" placeholder="R$ PTS">
+                            </td>
+                            <td><input id="A3.5.4" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Auxiliares</td>
+                            <td><input id="A3.1.5" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A3.2.5" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A3.3.5" type="text" class="form-control" placeholder="R$ PRL">
+                            </td>
+                            <td><input id="A3.4.5" type="text" class="form-control" placeholder="R$ PTS">
+                            </td>
+                            <td><input id="A3.5.5" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Operadores</td>
+                            <td><input id="A3.1.6" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A3.2.6" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A3.3.6" type="text" class="form-control" placeholder="R$ PRL">
+                            </td>
+                            <td><input id="A3.4.6" type="text" class="form-control" placeholder="R$ PTS">
+                            </td>
+                            <td><input id="A3.5.6" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Outros</td>
+                            <td><input id="A3.1.7" type="text" class="form-control" placeholder="R$">
+                            </td>
+                            <td><input id="A3.2.7" type="text" class="form-control" placeholder="Quantidade">
+                            </td>
+                            <td><input id="A3.3.7" type="text" class="form-control" placeholder="R$ PRL">
+                            </td>
+                            <td><input id="A3.4.7" type="text" class="form-control" placeholder="R$ PTS">
+                            </td>
+                            <td><input id="A3.5.7" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>SubTotal A.3
+                            </td>
+                            <td><input id="sum.A3" type="text" class="form-control" placeholder="R$ SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>Total A (A1 + A2 + A3)
+                            </td>
+                            <td><input id="totalA" type="text" class="form-control" placeholder="Total A">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

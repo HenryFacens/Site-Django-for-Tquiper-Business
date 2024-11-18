@@ -1,0 +1,51 @@
+{% load static %}
+<div class="intro-y box mt-5">
+    <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60">
+        <h2 class="font-medium text-base mr-auto">
+            Outros Serviços de Contratações
+        </h2>
+    </div>
+    <div class="p-5" id="bordered-table">
+        <div class="preview">
+            <div class="overflow-x-auto">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="whitespace-nowrap">Descrição do(s) Serviço(s)</th>
+                            <th class="whitespace-nowrap">Preço Unit.</th>
+                            <th class="whitespace-nowrap">Fator Util.</th>
+                            <th class="whitespace-nowrap">Valor Unit.(R$)</th>
+                            <th class="whitespace-nowrap">Quant.</th>
+                            <th class="whitespace-nowrap">Subtotal (R$ Mês)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input id="Z1.1.1" type="text" class="form-control" placeholder="Descrição"></td>
+                            <td><input id="Z1.2.1" type="text" class="form-control" placeholder="Preço Unit.">
+                            </td>
+                            <td><input id="Z1.3.1" type="text" class="form-control" placeholder="Fator Util.">
+                            </td>
+                            <td><input id="Z1.4.1" type="text" class="form-control" placeholder="Valor Unit.(R$)">
+                            </td>
+                            <td><input id="Z1.5.1" type="text" class="form-control" placeholder="Quant.">
+                            </td>
+                            <td><input id="Z1.6.1" type="text" class="form-control" placeholder="SubTotal">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Total OSC: </td>
+                            <td><input id="sum.OSC" type="text" class="form-control" placeholder="Total">
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+
+<head>
+
+    {% include 'dashboard/template/head.html' %}
+</head>
+
+<body>
+    {% include 'dashboard/template/mobile_top.html' %}
+    {% include 'dashboard/template/top_bar.html' %}
+
+    <div class="page-content">
+
+
+
+        <div class="main-container">
+            {% include 'dashboard/template/side_menu.html' %}
+            {% include 'dashboard/template/tables/mainTables.html' %}
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+    </div>
+    </div>
+</body>
+{% include 'dashboard/template/extras.html' %}
+<script type="module" src="{% static 'js/dashJs/main.js' %}"></script>
+<script src="{% static 'js/ckeditor-balloon.js' %}"></script>
+
+<script>
+    // Import BalloonBlockEditor and initialize it
+    import BalloonBlockEditor from "@ckeditor/ckeditor5-build-balloon-block";
+
+    console.log("BalloonBlockEditor");
+    document.addEventListener("DOMContentLoaded", () => {
+        // Initialize CKEditor for all elements with class 'editor'
+        document.querySelectorAll(".editor").forEach((el) => {
+            BalloonBlockEditor.create(el)
+                .catch((error) => {
+                    console.error("There was an error initializing the editor:", error);
+                });
+        });
+    });
+</script>
+
+
+</html>
