@@ -1,6 +1,6 @@
 // tableA3.js
 export const TableA3 = {
-    setup: function (storeData, CalculateTotalA) {
+    setup: function (storeData, CalculateTotalA, TableE) {
         // Função para formatar valores em moeda
         const formatCurrency = (value) => {
             return isNaN(value)
@@ -59,7 +59,7 @@ export const TableA3 = {
             // Salva todos os dados
             storeData();
             CalculateTotalA();
-
+            TableE()
         };
 
         // Configuração inicial dos cálculos

@@ -1,6 +1,6 @@
 import { storeData } from "../utils.js";
 
-export const CalculateTotalC = () => {
+export const CalculateTotalD = () => {
 
     const formatCurrency = (value) => {
         return isNaN(value)
@@ -14,22 +14,21 @@ export const CalculateTotalC = () => {
 
     const formData = JSON.parse(localStorage.getItem("formData")) || {};
     console.log(formData);
-    const totalC1 = parseFloat(formData["sum.C1"] || 0);
-    const totalC2 = parseFloat(formData["sum.C2"] || 0);
-    const totalC3 = parseFloat(formData["sum.C3"] || 0);
-    const totalC4 = parseFloat(formData["sum.C4"] || 0);
-    console.log(totalC1, totalC2, totalC3, totalC4);
+    const totalD1 = parseFloat(formData["sum.D1"] || 0);
+    const totalD2 = parseFloat(formData["sum.D2"] || 0);
+    console.log(totalD1, totalD2);
 
-    const totalC = totalC1 + totalC2 + totalC3 + totalC4;
+    const totalD = totalD1 + totalD2;
 
-    const totalField = document.getElementById("totalC");
+    const totalField = document.getElementById("totalD");
     if (totalField) {
-        totalField.value = formatCurrency(totalC);
+        totalField.value = formatCurrency(totalD);
     }
 
     // Atualiza o valor no formData e salva
-    formData["totalC"] = totalC;
+    formData["totalD"] = totalD;
     localStorage.setItem("formData", JSON.stringify(formData));
     storeData();
 
-}
+
+};

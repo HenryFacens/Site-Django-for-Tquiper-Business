@@ -1,5 +1,5 @@
 export const TableB3 = {
-    setup: function (storeData, CalculateTotalB) {
+    setup: function (storeData, CalculateTotalB, TableE) {
 
         const rows = document.querySelectorAll("#TableB3 tr");
 
@@ -41,6 +41,8 @@ export const TableB3 = {
                 }
                 storeData();
                 CalculateTotalB();
+                TableE();
+
             };
 
             inputPvalorUnit?.addEventListener("input", calculateSubtotal);

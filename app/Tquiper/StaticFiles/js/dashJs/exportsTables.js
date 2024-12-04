@@ -1,6 +1,6 @@
 // Tables A
 import { TableA1 } from "./tableA/TableA1.js";
-import { TableA2 } from "./tableA/TableA2.js";
+import { TableA2 } from "./tableA/tableA2.js";
 import { TableA3 } from "./tableA/tableA3.js";
 import { CalculateTotalA } from "./tableA/calculateTotalA.js";
 
@@ -14,10 +14,29 @@ import { CalculateTotalB } from "./tableB/calculateTotalB.js";
 
 // Tables C
 import { TableC1 } from "./tableC/TableC1.js";
+import { TableC2 } from "./tableC/TableC2.js";
+import { TableC3 } from "./tableC/TableC3.js";
+import { TableC4 } from "./tableC/TableC4.js";
 import { CalculateTotalC } from "./tableC/CalculateTotalC.js";
+
+// Tables D
+import { TableD1 } from "./tableD/TableD1.js";
+import { TableD2 } from "./tableD/TableD2.js";
+import { CalculateTotalD } from "./tableD/CalculateTotalD.js";
+
+// Tables OSC
+import { TableOSC } from "./tableOSC/tableOSC.js";
+import { CalculateTotalOSC } from "./tableOSC/calculateTotalOSC.js";
+
+// Table E 
+import { TableE } from "./tableE/tableE.js";
+import { CalculateTotalE } from "./tableE/CalculateTotalE.js";
 
 export {
     TableA1, TableA2, TableA3, CalculateTotalA,
     TableB1, TableB1A, TableB2, TableB3, TableB4, CalculateTotalB,
-    TableC1, CalculateTotalC
+    TableC1, TableC2, TableC3, TableC4, CalculateTotalC,
+    TableD1, TableD2, CalculateTotalD,
+    TableOSC, CalculateTotalOSC,
+    TableE, CalculateTotalE
 };

@@ -1,5 +1,5 @@
 export const TableA2 = {
-    setup: function (storeData, CalculateTotalA) {
+    setup: function (storeData, CalculateTotalA, TableE) {
         const rows = document.querySelectorAll("#TableA2 tr");
 
         rows.forEach(row => {
@@ -98,7 +98,7 @@ export const TableA2 = {
                 }
                 storeData(); // Salva após o cálculo
                 CalculateTotalA();
-
+                TableE()
             };
 
             // Adiciona eventos de input para os cálculos
