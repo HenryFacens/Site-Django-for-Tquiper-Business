@@ -13,12 +13,10 @@ export const CalculateTotalC = () => {
     };
 
     const formData = JSON.parse(localStorage.getItem("formData")) || {};
-    console.log(formData);
     const totalC1 = parseFloat(formData["sum.C1"] || 0);
     const totalC2 = parseFloat(formData["sum.C2"] || 0);
     const totalC3 = parseFloat(formData["sum.C3"] || 0);
     const totalC4 = parseFloat(formData["sum.C4"] || 0);
-    console.log(totalC1, totalC2, totalC3, totalC4);
 
     const totalC = totalC1 + totalC2 + totalC3 + totalC4;
 

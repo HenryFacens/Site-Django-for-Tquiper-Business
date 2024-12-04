@@ -22,9 +22,7 @@ export const TableC1 = {
                 const captalReturn = parseFloat(inputPorcent?.value || 0);
                 // const returnCaptal = parseFloat(inputReturnCaptal?.value || 0);
                 const prazo = parseFloat(inputPrazo?.value || 0);
-                console.log(price, quantity, captalReturn, prazo);
                 const returnCaptal = (price * quantity) * (captalReturn / 100) / prazo;
-                console.log(returnCaptal);
                 const subtotal = price + returnCaptal;
 
                 if (inputSubtotal) {
@@ -46,7 +44,6 @@ export const TableC1 = {
             };
 
             const calculateSumSubtotal = () => {
-                console.log('Calculating sum subtotal...');
                 let sum = 0;
                 document.querySelectorAll('input[id^="C1.6"]').forEach((input) => {
                     const value = parseFloat(input?.value.replace(/[^\d,-]/g, '').replace(',', '.') || 0);

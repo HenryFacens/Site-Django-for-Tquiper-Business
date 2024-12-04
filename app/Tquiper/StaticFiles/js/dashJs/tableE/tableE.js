@@ -1,8 +1,8 @@
 import {
-    storeData as storeData,
+    storeData,
 } from "../utils.js";
 
-export const TableE = (storeData = null) => {
+export const TableE = () => {
     const formatCurrency = (value) => {
         return isNaN(value)
             ? ""
@@ -33,26 +33,13 @@ export const TableE = (storeData = null) => {
     const totalD = parseCurrency(formData["totalD"] || 0);
     const totalOSC = parseFloat(formData["sum.OSC"] || 0);
 
-    console.log(totalA); // Exibe o valor numérico correto
-    console.log(totalB);
-    console.log(totalC);
-    console.log(totalD);
-    console.log(totalOSC);
-
-
     const totalGeneral = totalA + totalB + totalC + totalD + totalOSC;
-    console.log('teste totalGeneral');
-    console.log(totalGeneral);
 
     // Calcula porcentagens
     const percentA = totalGeneral > 0 ? (totalA / totalGeneral) * 100 : 0;
-    console.log(percentA);
     const percentB = totalGeneral > 0 ? (totalB / totalGeneral) * 100 : 0;
-    console.log(percentB);
     const percentC = totalGeneral > 0 ? (totalC / totalGeneral) * 100 : 0;
-    console.log(percentC);
     const percentD = totalGeneral > 0 ? (totalD / totalGeneral) * 100 : 0;
-    console.log(percentD);
     const percentOSC = totalGeneral > 0 ? (totalOSC / totalGeneral) * 100 : 0;
 
     const rows = document.querySelectorAll("#TableE tr");

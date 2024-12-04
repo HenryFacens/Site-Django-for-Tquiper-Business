@@ -29,7 +29,6 @@ export const TableA1 = {
             };
 
             const calculateSumSubtotal = () => {
-                console.log("Calculating sum subtotal...");
                 let sum = 0;
                 document.querySelectorAll('input[id^="A1.3"]').forEach(input => {
                     const value = parseFloat(input?.value.replace(/[^\d,-]/g, "").replace(",", ".") || 0);

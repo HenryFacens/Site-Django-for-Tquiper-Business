@@ -12,13 +12,11 @@ export const CalculateTotalB = () => {
     };
     // Carrega o formData do localStorage
     const formData = JSON.parse(localStorage.getItem("formData")) || {};
-    console.log(formData);
     const totalB1 = parseFloat(formData["sum.B1"] || 0);
     const totalB1A = parseFloat(formData["sum.B1A"] || 0);
     const totalB2 = parseFloat(formData["sum.B2"] || 0);
     const totalB3 = parseFloat(formData["sum.B3"] || 0);
     const totalB4 = parseFloat(formData["sum.B4"] || 0);
-    console.log(totalB1, totalB1A, totalB2, totalB3, totalB4);
 
     const totalB = totalB1 + totalB1A + totalB2 + totalB3 + totalB4;
 

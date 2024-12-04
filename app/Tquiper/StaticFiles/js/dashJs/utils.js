@@ -15,7 +15,6 @@ export const storeData = () => {
         formData[input.id] = value;
     });
     localStorage.setItem("formData", JSON.stringify(formData));
-    console.log(formData);
 };
 
 export const loadFormData = () => {
@@ -34,7 +33,6 @@ export const loadFormData = () => {
             input.value = value;
         }
     });
-    console.log(storedData);
 };
 
 export const clearFormData = {

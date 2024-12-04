@@ -1,9 +1,7 @@
 export const TableOSC = {
     setup: function (storeData, CalculateTotalOSC = null) {
         const rows = document.querySelectorAll('#TableOSC tr');
-        console.log('TableOSC setup');
         rows.forEach((row) => {
-            console.log('TableOSC forEach');
             const inputDescriptions = row.querySelector("input[id^='Z1.1']");
             const inputPrice = row.querySelector("input[id^='Z1.2']");
             const inputFatorUtil = row.querySelector("input[id^='Z1.3']");
@@ -11,7 +9,6 @@ export const TableOSC = {
             const inputQuant = row.querySelector("input[id^='Z1.5']");
             const inputSubtotal = document.querySelector("input[id^='Z1.6']");
             const inputSumSubtotal = document.getElementById("sum.OSC");
-            console.log('TableOSC inputs');
             const calculateSubtotal = () => {
                 const price = parseFloat(inputPrice?.value.replace(/[^\d,-]/g, "").replace(",", ".") || 0);
                 const quantity = parseFloat(inputQuant?.value || 0);

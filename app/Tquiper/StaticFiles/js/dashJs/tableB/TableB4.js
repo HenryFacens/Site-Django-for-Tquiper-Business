@@ -1,6 +1,5 @@
 export const TableB4 = {
     setup: function (storeData, CalculateTotalB, TableE) {
-        console.log("Setting up TableB4...");
         const rows = document.querySelectorAll("#TableB4 tr");
 
         rows.forEach(row => {
@@ -25,7 +24,6 @@ export const TableB4 = {
                 calculateSumSubtotal();
             }
             const calculateSumSubtotal = () => {
-                console.log("Calculating sum subtotal...");
                 let sum = 0;
                 document.querySelectorAll('input[id^="B4.3"]').forEach(input => {
                     const value = parseFloat(input?.value.replace(/[^\d,-]/g, "").replace(",", ".") || 0);

@@ -13,10 +13,8 @@ export const CalculateTotalD = () => {
     };
 
     const formData = JSON.parse(localStorage.getItem("formData")) || {};
-    console.log(formData);
     const totalD1 = parseFloat(formData["sum.D1"] || 0);
     const totalD2 = parseFloat(formData["sum.D2"] || 0);
-    console.log(totalD1, totalD2);
 
     const totalD = totalD1 + totalD2;
 
