@@ -1,5 +1,5 @@
 export const TableC1 = {
-    setup: function (storeData, CalculateTotalC) {
+    setup: function (storeData, CalculateTotalC, TableE) {
 
         const rows = document.querySelectorAll('#TableC1 tr');
 
@@ -73,6 +73,7 @@ export const TableC1 = {
 
                 storeData();
                 CalculateTotalC();
+                TableE();
 
             };
 

@@ -16,7 +16,7 @@ import {
     TableD1, TableD2, CalculateTotalD,
     TableOSC, CalculateTotalOSC,
     TableE, CalculateTotalE,
-
+    TableF,
 } from "./exportsTables.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -75,7 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
     TableD1.setup(storeData, CalculateTotalD, TableE);
     TableD2.setup(storeData, CalculateTotalD, TableE);
     // Inicializa a tabela OSC
-    TableOSC.setup(storeData, CalculateTotalOSC);
+    TableOSC.setup(storeData, TableE);
 
-    TableE(storeData);
+    // Inicializa a tabela F
+    TableF.setup(storeData);
+
+    TableE();
 });

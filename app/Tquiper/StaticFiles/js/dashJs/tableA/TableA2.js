@@ -32,13 +32,15 @@ export const TableA2 = {
                         });
                 }
 
-                calculateSumSubtotal();
+
                 const totalA2Field = document.getElementById("total.A2");
                 if (totalA2Field) {
                     totalA2Field.value = total; // Armazena o valor numérico
                 }
 
+                calculateSumSubtotal();
                 storeData(); // Salva após o cálculo
+
             };
 
             /**

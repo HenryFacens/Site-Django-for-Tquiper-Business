@@ -1,21 +1,32 @@
 export const storeData = () => {
-    const formData = {};
-    console
-    const inputs = document.querySelectorAll("input");
-    inputs.forEach(input => {
-        let value = input.value || "0";
+    const formData = {}; // Objeto para armazenar os dados formatados
+    const inputs = document.querySelectorAll("input"); // Seleciona todos os inputs
 
-        // Se o input tiver um ID que corresponda a um total, armazenamos o valor numérico
-        if (input.id.startsWith("total.") || input.id.startsWith("sum.")) {
-            // Remove qualquer formatação antes de armazenar
-            value = value.replace(/[^\d,-]/g, "").replace(",", ".");
-            value = parseFloat(value) || 0;
+    inputs.forEach(input => {
+        let value = input.value || "0"; // Obtém o valor do input ou define como "0" se vazio
+        let id = input.id || ""; // Captura o ID do input
+
+        // Ignorar entradas sem ID
+        if (!id || id === "") return;
+
+        // Remove "R$" e ajusta formatação para valores monetários
+        if (value.includes("R$")) {
+            value = value.replace(/[^\d,-]/g, "").replace(",", "."); // Remove "R$", formata vírgula -> ponto
+            value = parseFloat(value) || 0; // Converte para float
+        } else {
+            // Para outros valores numéricos
+            const numericValue = parseFloat(value);
+            if (!isNaN(numericValue)) {
+                value = numericValue; // Converte para float
+            }
         }
 
-        formData[input.id] = value;
+        formData[id] = value; // Salva o valor processado no objeto
     });
-    localStorage.setItem("formData", JSON.stringify(formData));
+
+    localStorage.setItem("formData", JSON.stringify(formData)); // Armazena o objeto formatado no localStorage
 };
+
 
 export const loadFormData = () => {
     const storedData = JSON.parse(localStorage.getItem("formData")) || {};

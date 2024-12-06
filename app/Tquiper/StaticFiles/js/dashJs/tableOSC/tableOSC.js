@@ -1,5 +1,5 @@
 export const TableOSC = {
-    setup: function (storeData, CalculateTotalOSC = null) {
+    setup: function (storeData, TableE) {
         const rows = document.querySelectorAll('#TableOSC tr');
         rows.forEach((row) => {
             const inputDescriptions = row.querySelector("input[id^='Z1.1']");
@@ -31,6 +31,7 @@ export const TableOSC = {
                 }
                 storeData();
                 calculateSumSubtotal();
+                TableE()
             }
 
             const calculateSumSubtotal = () => {

@@ -1,5 +1,5 @@
 export const TableD2 = {
-    setup: function (storeData, CalculateTotalD) {
+    setup: function (storeData, CalculateTotalD, TableE) {
         const rows = document.querySelectorAll("#TableD2 tr");
 
         rows.forEach((row) => {

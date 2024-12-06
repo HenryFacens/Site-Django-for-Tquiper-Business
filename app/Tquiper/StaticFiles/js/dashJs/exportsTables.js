@@ -31,12 +31,14 @@ import { CalculateTotalOSC } from "./tableOSC/calculateTotalOSC.js";
 // Table E 
 import { TableE } from "./tableE/tableE.js";
 import { CalculateTotalE } from "./tableE/CalculateTotalE.js";
-
+// Table F
+import { TableF } from "./tableF/tableF.js";
 export {
     TableA1, TableA2, TableA3, CalculateTotalA,
     TableB1, TableB1A, TableB2, TableB3, TableB4, CalculateTotalB,
     TableC1, TableC2, TableC3, TableC4, CalculateTotalC,
     TableD1, TableD2, CalculateTotalD,
     TableOSC, CalculateTotalOSC,
-    TableE, CalculateTotalE
+    TableE, CalculateTotalE,
+    TableF,
 };

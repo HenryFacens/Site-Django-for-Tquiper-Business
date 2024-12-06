@@ -25,20 +25,20 @@ export const TableF = {
         };
 
         const formData = JSON.parse(localStorage.getItem("formData")) || {};
-
+        const totalE = parseFloat(formData["total.custos"] || 0);
 
 
         const rows = document.querySelectorAll('#TableF tr');
 
         rows.forEach((row) => {
-            const porc_BDI = document.getElementById("porc.BDI");
+            const input_porc_BDI = document.getElementById("porc.BDI");
             const total_BDI = document.getElementById("total.BDI");
 
 
             const calculateSubtotal = () => {
-                const porc = parseFloat(porc_BDI?.value.replace(/[^\d,-]/g, "").replace(",", ".") || 0);
-                const total = parseFloat(total_BDI?.value.replace(/[^\d,-]/g, "").replace(",", ".") || 0);
-                const subtotal = total * (porc / 100);
+                const porc = parseFloat(input_porc_BDI?.value.replace(/[^\d,-]/g, "").replace(",", ".") || 0);
+                const totalE = parseFloat(total_BDI?.value.replace(/[^\d,-]/g, "").replace(",", ".") || 0);
+                const subtotal = totalE * (porc / 100);
                 if (total_BDI) {
                     total_BDI.value = isNaN(subtotal) ? "" : subtotal.toLocaleString("pt-BR", {
                         style: "currency",
@@ -48,6 +48,8 @@ export const TableF = {
                 }
                 storeData();
             }
+
+            input_porc_BDI?.addEventListener("input", calculateSubtotal);
 
         });
 

@@ -45,6 +45,11 @@ export const TableE = () => {
     const rows = document.querySelectorAll("#TableE tr");
 
     rows.forEach((row) => {
+
+        console.log(formData);
+
+        console.log("Passou por aqui E ");
+
         const taotalAE = row.querySelector("input[id^='E1.1.1']");
         const taotalBE = row.querySelector("input[id^='E1.1.2']");
         const taotalCE = row.querySelector("input[id^='E1.1.3']");

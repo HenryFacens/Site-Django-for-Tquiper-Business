@@ -24,7 +24,6 @@ export const TableA1 = {
                         minimumFractionDigits: 2,
                     });
                 }
-
                 calculateSumSubtotal();
             };
 
@@ -74,10 +73,18 @@ export const TableA1 = {
                         minimumFractionDigits: 2,
                     });
                 }
+
+
+
+
                 storeData(); // Salva os dados ao calcular
                 CalculateTotalA();
                 TableE()
 
+            };
+
+            const removeFormat = (value) => {
+                return value.replace(/[^\d,-]/g, "").replace(",", ".");
             };
 
             // Adiciona eventos de input
